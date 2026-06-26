@@ -362,6 +362,24 @@
       .footer-inner { justify-content: center; text-align: center; }
       .cta-ribbon-btns { flex-direction: column; align-items: center; }
     }
+    /* â”€â”€ SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .site-footer { background: #111; border-top: 1px solid rgba(255,255,255,0.08); padding: 56px 0 0; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-brand-logo { height: 52px; margin-bottom: 16px; }
+    .footer-tagline { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; max-width: 270px; }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social-icon { width: 34px; height: 34px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+    .footer-social-icon:hover { background: rgba(255,255,255,0.18); }
+    .footer-social-icon svg { width: 15px; height: 15px; fill: var(--white); }
+    .footer-col-title { font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 14px; color: var(--text-muted); padding: 5px 0; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; gap: 12px; flex-wrap: wrap; }
+    .footer-bottom span { font-size: 13px; color: var(--text-muted); }
+    .footer-bottom a { color: var(--amber); }
+    .footer-bottom a:hover { text-decoration: underline; }
+    @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .footer-top { grid-template-columns: 1fr; } .footer-bottom { justify-content: center; text-align: center; } }
   </style>
 </head>
 <body>
@@ -371,7 +389,7 @@
   <div class="container">
     <div class="header-inner">
       <a href="../index.html" class="header-logo">
-        <img src="../images/logo.png" alt="Suburban Business Summit" />
+        <img src="../images/logo-suburban-business-summit-dk.png" alt="Suburban Business Summit" />
       </a>
       <div class="header-right">
         <a href="tel:0451248292" class="btn-phone">
@@ -379,20 +397,12 @@
           <span>Call Us On 0451 248 292</span>
         </a>
         <div class="social-icons">
-          <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
-            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
+          <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
         </div>
         <button class="hamburger" onclick="document.getElementById('navDrawer').classList.toggle('open')" aria-label="Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--dark)" stroke-width="2.5" stroke-linecap="round">
-            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--dark)" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
@@ -404,15 +414,17 @@
     <button class="nav-drawer-close" onclick="document.getElementById('navDrawer').classList.remove('open')">&times;</button>
     <a href="../index.html">Home</a>
     <a href="../about.html">About</a>
-    <a href="northern-beaches.html">Northern Beaches — June 2026</a>
-    <a href="central-coast.html">Central Coast — March 2026</a>
-    <a href="hornsby.html">Hornsby — November 2025</a>
-    <a href="illawarra.html">Illawarra — September 2026</a>
+    <p class="nav-drawer-category">Upcoming Events</p>
+    <a href="northern-beaches.html" class="nav-sub">Northern Beaches &mdash; June 2026</a>
+    <a href="illawarra.html" class="nav-sub">Illawarra &mdash; September 2026</a>
+    <p class="nav-drawer-category">Past Events</p>
+    <a href="central-coast.html" class="nav-sub">Central Coast &mdash; March 2026</a>
+    <a href="hornsby.html" class="nav-sub">Hornsby &mdash; November 2025</a>
     <a href="../sponsorship-partnership-packages.html">Sponsorship &amp; Packages</a>
     <a href="../booking-form.html">Sponsor &amp; Exhibition Booking</a>
     <a href="../gallery.html">Gallery</a>
     <a href="../contact.html">Contact Us</a>
-    <a href="tel:0451248292" style="color: var(--amber); margin-top: 16px;">Call 0451 248 292</a>
+    <a href="tel:0451248292" style="color: var(--amber); margin-top: 8px;">Call 0451 248 292</a>
   </div>
 </nav>
 
@@ -422,7 +434,7 @@
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
-      <p class="hero-eyebrow">Next Event:</p>
+      <p class="hero-eyebrow">Past Event</p>
       <h1 class="hero-title">Suburban Business Summit — Central Coast</h1>
       <div class="hero-meta">
         <div class="hero-meta-row">
@@ -619,22 +631,41 @@
 </section>
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
-<footer class="footer">
+<footer class="site-footer">
   <div class="container">
-    <div class="footer-inner">
-      <img src="../images/logo.png" alt="Suburban Business Summit" class="footer-logo" style="background:#fff;padding:6px 8px;border-radius:4px;" />
-      <span class="footer-copy">Suburban Business Summit © 2026. All rights reserved</span>
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
-          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
-          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../images/logo-suburban-business-summit-dk.png" alt="Suburban Business Summit" class="footer-brand-logo" />
+        <p class="footer-tagline">A one-day big-conference experience for local business owners, professionals and community leaders &mdash; brought to your suburb.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/></svg></a>
+          <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="footer-social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
       </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Events</p>
+        <a href="northern-beaches.html">Northern Beaches &mdash; June 2026</a>
+        <a href="illawarra.html">Illawarra &mdash; September 2026</a>
+        <a href="central-coast.html">Central Coast &mdash; March 2026</a>
+        <a href="hornsby.html">Hornsby &mdash; November 2025</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Information</p>
+        <a href="../about.html">About</a>
+        <a href="../sponsorship-partnership-packages.html">Sponsorship &amp; Packages</a>
+        <a href="../booking-form.html">Sponsor &amp; Exhibition Booking</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Get In Touch</p>
+        <a href="tel:0451248292">0451 248 292</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Suburban Business Summit. All rights reserved.</span>
+      <span>Made with &hearts; by <a href="https://thriiv.digital" target="_blank" rel="noopener">thriiv.digital</a></span>
     </div>
   </div>
 </footer>
@@ -680,5 +711,14 @@
   updateCarousel();
 </script>
 
+
+
+<script>
+(function(){
+  var hdr = document.querySelector('.header');
+  if (!hdr) return;
+  window.addEventListener('scroll', function(){ hdr.classList.toggle('compact', window.scrollY > 60); }, { passive: true });
+})();
+</script>
 </body>
 </html>
