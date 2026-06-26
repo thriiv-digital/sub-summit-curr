@@ -35,7 +35,7 @@
       --green: #4A7C59;
       --radius: 6px;
       --radius-lg: 10px;
-      --max: 1140px;
+      --max: 1440px;
     }
 
     html { scroll-behavior: smooth; }
@@ -58,13 +58,8 @@
     }
 
     /* ── HEADER ─────────────────────────────────────────── */
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--dark);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+    
+    .header > .container { max-width: 100%; padding: 0 40px; }
 
     .header-inner {
       display: flex;
@@ -1196,11 +1191,14 @@
     </div>
   </div>
   <hr class="footer-divider" />
-  <div class="footer-bottom">
-    <span>&copy; 2026 Suburban Business Summit. All rights reserved.</span>
-    <span>Made with &hearts; by <a href="https://thriiv.digital" target="_blank" rel="noopener">thriiv.digital</a></span>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 Suburban Business Summit. All rights reserved.</span>
+      <span>Made with &hearts; by <a href="https://thriiv.digital" target="_blank" rel="noopener">thriiv.digital</a></span>
+    </div>
   </div>
 </footer>
+  
 
 
 

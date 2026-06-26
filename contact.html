@@ -33,7 +33,7 @@
       --text-secondary: #CCCCCC;
       --radius: 6px;
       --radius-lg: 10px;
-      --max: 1140px;
+      --max: 1440px;
     }
 
     html { scroll-behavior: smooth; }
@@ -49,12 +49,8 @@
     .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
     /* ── HEADER ─────────────────────────────────────────── */
-    .header {
-      position: sticky; top: 0; z-index: 100;
-      background: var(--dark-2);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-    }
+    
+    .header > .container { max-width: 100%; padding: 0 40px; }
     .header-inner {
       display: flex; align-items: center;
       justify-content: space-between;
@@ -530,11 +526,14 @@
     </div>
   </div>
   <hr class="footer-divider" />
-  <div class="footer-bottom">
-    <span>&copy; 2026 Suburban Business Summit. All rights reserved.</span>
-    <span>Made with &hearts; by <a href="https://thriiv.digital" target="_blank" rel="noopener">thriiv.digital</a></span>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 Suburban Business Summit. All rights reserved.</span>
+      <span>Made with &hearts; by <a href="https://thriiv.digital" target="_blank" rel="noopener">thriiv.digital</a></span>
+    </div>
   </div>
 </footer>
+  
 
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(e) {
