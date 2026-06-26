@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Suburban Business Summit</title>
+  <meta name="description" content="Suburban Business Summit — a dedicated space for local business owners, professionals, and community leaders. Backing business. Driving success." />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF5VT3P4T6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HF5VT3P4T6');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --amber: #F5A623;
+      --amber-dark: #D9891A;
+      --dark: #1C1C1C;
+      --dark-2: #242424;
+      --dark-3: #2E2E2E;
+      --white: #FFFFFF;
+      --off-white: #F0EDE8;
+      --text-muted: #A0A0A0;
+      --text-secondary: #CCCCCC;
+      --radius: 6px;
+      --radius-lg: 10px;
+      --max: 1140px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ── HEADER ─────────────────────────────────────────── */
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--dark-2);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    .header-inner {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      height: 68px; gap: 20px;
+    }
+    .header-logo img { height: 48px; }
+    .header-right { display: flex; align-items: center; gap: 16px; }
+    .btn-phone {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 14px; font-weight: 700; color: var(--white);
+      background: rgba(255,255,255,0.08); border-radius: var(--radius);
+      padding: 8px 14px; transition: background 0.2s;
+    }
+    .btn-phone:hover { background: rgba(255,255,255,0.15); }
+    .social-icons { display: flex; gap: 10px; }
+    .social-icon {
+      width: 32px; height: 32px; background: rgba(255,255,255,0.08);
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; transition: background 0.2s;
+    }
+    .social-icon:hover { background: rgba(255,255,255,0.18); }
+    .social-icon svg { width: 15px; height: 15px; fill: var(--white); stroke: none; }
+    .hamburger {
+      background: rgba(255,255,255,0.1); border: none; border-radius: var(--radius);
+      width: 38px; height: 38px; display: flex; align-items: center;
+      justify-content: center; cursor: pointer; transition: background 0.2s;
+    }
+    .hamburger svg { width: 18px; height: 18px; }
+    .hamburger:hover { background: var(--amber); }
+
+    .nav-drawer {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.85);
+    }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer-panel {
+      margin-left: auto; width: min(360px, 100%);
+      background: var(--dark-2); height: 100%;
+      padding: 32px 28px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .nav-drawer-close {
+      align-self: flex-end; background: none; border: none;
+      color: var(--white); font-size: 28px; cursor: pointer; margin-bottom: 16px;
+    }
+    .nav-drawer a {
+      display: block; font-size: 20px; font-weight: 700;
+      padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: var(--white);
+    }
+    .nav-drawer a:hover { color: var(--amber); }
+
+    /* ── HERO ───────────────────────────────────────────── */
+    .page-hero {
+      background: var(--dark-2);
+      padding: 72px 0 64px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .page-hero-eyebrow {
+      font-size: 12px; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 16px;
+    }
+    .page-hero-title {
+      font-size: clamp(32px, 5vw, 56px); font-weight: 900;
+      line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 24px;
+      max-width: 700px;
+    }
+    .page-hero-intro {
+      font-size: 18px; color: var(--text-secondary);
+      line-height: 1.75; max-width: 660px;
+    }
+    .page-hero-tagline {
+      display: inline-block; margin-top: 28px;
+      font-size: 14px; font-weight: 800; letter-spacing: 0.06em;
+      color: var(--amber);
+      text-transform: uppercase;
+    }
+
+    /* ── CONTENT ────────────────────────────────────────── */
+    .about-content {
+      padding: 72px 0;
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .about-body { display: flex; flex-direction: column; gap: 48px; }
+
+    .about-chapter {}
+    .about-chapter-label {
+      font-size: 11px; font-weight: 800; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .about-chapter h2 {
+      font-size: clamp(20px, 2.5vw, 26px); font-weight: 800;
+      letter-spacing: -0.01em; margin-bottom: 18px; line-height: 1.2;
+    }
+    .about-chapter p {
+      font-size: 16px; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 16px;
+    }
+    .about-chapter p:last-child { margin-bottom: 0; }
+    .about-chapter strong { color: var(--white); }
+
+    .about-list {
+      list-style: none; display: flex; flex-direction: column; gap: 12px;
+      margin: 4px 0 16px;
+    }
+    .about-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 15px; color: var(--text-secondary); line-height: 1.6;
+    }
+    .about-list li::before {
+      content: '';
+      width: 7px; height: 7px; background: var(--amber);
+      border-radius: 50%; margin-top: 7px; flex-shrink: 0;
+    }
+
+    .industries-wrap {
+      background: var(--dark-2); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg); padding: 24px 28px; margin-top: 20px;
+    }
+    .industries-label {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px;
+    }
+    .industries-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .industry-tag {
+      font-size: 13px; font-weight: 600;
+      background: var(--dark-3); color: var(--text-secondary);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px; padding: 5px 14px;
+    }
+
+    .about-tagline-block {
+      background: var(--amber); border-radius: var(--radius-lg);
+      padding: 28px 32px; margin-top: 8px;
+    }
+    .about-tagline-block p {
+      font-size: 18px; font-weight: 800; color: var(--dark);
+      line-height: 1.5; margin: 0 !important;
+    }
+
+    /* ── SIDEBAR ────────────────────────────────────────── */
+    .about-sidebar { display: flex; flex-direction: column; gap: 24px; }
+
+    .sidebar-stat {
+      background: var(--dark-2); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg); padding: 24px;
+    }
+    .sidebar-stat-num {
+      font-size: 40px; font-weight: 900; color: var(--amber);
+      letter-spacing: -0.03em; line-height: 1; margin-bottom: 6px;
+    }
+    .sidebar-stat-label {
+      font-size: 14px; color: var(--text-secondary); line-height: 1.5;
+    }
+
+    .sidebar-quote {
+      background: var(--dark-3); border-left: 3px solid var(--amber);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      padding: 20px 22px;
+    }
+    .sidebar-quote p {
+      font-size: 15px; color: var(--text-secondary);
+      line-height: 1.7; font-style: italic;
+    }
+
+    .sidebar-cta-card {
+      background: var(--dark-2); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg); padding: 24px;
+    }
+    .sidebar-cta-card h3 { font-size: 15px; font-weight: 800; margin-bottom: 10px; }
+    .sidebar-cta-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; }
+    .btn-amber {
+      display: block; background: var(--amber); color: var(--dark);
+      font-size: 14px; font-weight: 800; text-align: center;
+      padding: 12px 20px; border-radius: var(--radius);
+      transition: background 0.2s;
+    }
+    .btn-amber:hover { background: var(--amber-dark); }
+    .btn-outline {
+      display: block; margin-top: 10px;
+      border: 1px solid rgba(255,255,255,0.15); color: var(--white);
+      font-size: 14px; font-weight: 700; text-align: center;
+      padding: 11px 20px; border-radius: var(--radius);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--amber); color: var(--amber); }
+
+    /* ── HOSTED BY ──────────────────────────────────────── */
+    .hosted-by {
+      background: var(--dark-2);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 72px 0;
+    }
+    .hosted-by-inner { text-align: center; }
+    .hosted-by-label {
+      font-size: 12px; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 10px;
+    }
+    .hosted-by-title {
+      font-size: clamp(26px, 3.5vw, 36px); font-weight: 900;
+      letter-spacing: -0.02em; margin-bottom: 48px;
+    }
+    .host-card {
+      display: inline-flex; flex-direction: column;
+      align-items: center; max-width: 280px;
+    }
+    .host-photo-wrap {
+      width: 200px; height: 200px; border-radius: 50%;
+      overflow: hidden; margin-bottom: 24px;
+      border: 3px solid var(--amber);
+    }
+    .host-photo {
+      width: 110%; height: 110%; margin: -5%;
+      object-fit: cover;
+    }
+    .host-name {
+      font-size: 22px; font-weight: 900; letter-spacing: -0.01em; margin-bottom: 6px;
+    }
+    .host-title {
+      font-size: 14px; color: var(--text-muted); margin-bottom: 4px;
+    }
+    .host-website {
+      font-size: 14px; color: var(--amber); font-weight: 600;
+    }
+    .host-website:hover { text-decoration: underline; }
+    .host-contact {
+      display: flex; gap: 12px; margin-top: 18px; justify-content: center; flex-wrap: wrap;
+    }
+    .host-contact-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 700;
+      background: var(--dark-3); border: 1px solid rgba(255,255,255,0.1);
+      color: var(--white); padding: 9px 16px; border-radius: var(--radius);
+      transition: border-color 0.2s;
+    }
+    .host-contact-btn:hover { border-color: var(--amber); color: var(--amber); }
+    .host-contact-btn svg { width: 14px; height: 14px; }
+
+    /* ── EVENTS CTA ─────────────────────────────────────── */
+    .events-cta {
+      padding: 64px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .events-cta-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .event-cta-card {
+      background: var(--dark-2); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg); padding: 28px 28px 24px;
+      display: flex; flex-direction: column;
+    }
+    .event-cta-card:first-child { border-color: var(--amber); }
+    .event-cta-label {
+      font-size: 11px; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 10px;
+    }
+    .event-cta-name { font-size: 20px; font-weight: 900; margin-bottom: 6px; }
+    .event-cta-detail { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; flex: 1; }
+    .event-cta-btn {
+      display: inline-block; background: var(--amber); color: var(--dark);
+      font-size: 14px; font-weight: 800; padding: 11px 20px;
+      border-radius: var(--radius); text-align: center; transition: background 0.2s;
+    }
+    .event-cta-btn:hover { background: var(--amber-dark); }
+    .event-cta-card:not(:first-child) .event-cta-btn {
+      background: transparent; color: var(--white);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .event-cta-card:not(:first-child) .event-cta-btn:hover {
+      border-color: var(--amber); color: var(--amber);
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────── */
+    .footer-simple {
+      background: var(--dark-2); border-top: 1px solid rgba(255,255,255,0.07); padding: 28px 0;
+    }
+    .footer-simple-inner {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .footer-simple-logo { height: 36px; }
+    .footer-simple-copy { font-size: 13px; color: var(--text-muted); }
+    .footer-simple-socials { display: flex; gap: 10px; }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .about-inner { grid-template-columns: 1fr; }
+      .about-sidebar { order: -1; flex-direction: row; flex-wrap: wrap; }
+      .about-sidebar > * { flex: 1 1 200px; }
+      .events-cta-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .btn-phone span { display: none; }
+      .social-icons { display: none; }
+      .footer-simple-inner { justify-content: center; text-align: center; }
+      .about-sidebar { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ────────────────────────────────────────────── -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="images/logo-suburban-business-summit-dk.png" alt="Suburban Business Summit" />
+      </a>
+      <div class="header-right">
+        <a href="tel:0451248292" class="btn-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          <span>Call Us On 0451 248 292</span>
+        </a>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <button class="hamburger" onclick="document.getElementById('navDrawer').classList.toggle('open')" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-drawer" id="navDrawer" onclick="this.classList.remove('open')">
+  <div class="nav-drawer-panel" onclick="event.stopPropagation()">
+    <button class="nav-drawer-close" onclick="document.getElementById('navDrawer').classList.remove('open')">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="events-northern-beaches.html">Northern Beaches — June 2026</a>
+    <a href="events-illawarra.html">Illawarra — September 2026</a>
+    <a href="sponsorship-partnership-packages.html">Sponsorship &amp; Packages</a>
+    <a href="booking-form.html">Sponsor &amp; Exhibition Booking</a>
+    <a href="tel:0451248292" style="color: var(--amber); margin-top: 16px;">Call 0451 248 292</a>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+    <p class="page-hero-eyebrow">Who We Are</p>
+    <h1 class="page-hero-title">Backing Business.<br>Driving Success.</h1>
+    <p class="page-hero-intro">Suburban Business Summit is a dedicated space for business owners, professionals, and community leaders who believe that strong local businesses create strong local communities. Our mission is simple: backing business, driving success.</p>
+    <span class="page-hero-tagline">Suburban Business Summit</span>
+  </div>
+</section>
+
+<!-- ── MAIN CONTENT ───────────────────────────────────────── -->
+<section class="about-content">
+  <div class="container">
+    <div class="about-inner">
+
+      <!-- BODY COPY -->
+      <div class="about-body">
+
+        <div class="about-chapter">
+          <p class="about-chapter-label">Our Beginning</p>
+          <p>The Summit began with a clear and deliberate vision: to bring the energy, insight, and impact of a major business conference into suburban and regional locations — giving local businesses access to big-event thinking, expertise, and connections close to where they live and work.</p>
+          <p>Our inaugural event proved there was a genuine appetite for this approach. Business owners, industry leaders, and community organisations came together to share knowledge, build relationships, and explore practical solutions to real challenges.</p>
+          <p>The result was a high-energy, collaborative event grounded in lived experience and focused on outcomes, not hype. That first Summit confirmed what we believed from the start: <strong>when you invest in local business capability, confidence, and connection, the benefits extend far beyond the room.</strong></p>
+        </div>
+
+        <div class="about-chapter">
+          <p class="about-chapter-label">What We're Building Towards 2026</p>
+          <p>Looking ahead to 2026, Suburban Business Summit is evolving into a connected series of suburban and regional business events that strengthen local economies and leadership across Australia. Our focus is on:</p>
+          <ul class="about-list">
+            <li>Expanding into more communities while retaining a strong local identity at each event</li>
+            <li>Deepening collaboration between business, government, industry, and community organisations</li>
+            <li>Providing practical, action-focused content that supports sustainable growth and resilience</li>
+            <li>Creating pathways for partnerships, innovation, and shared success beyond the event day</li>
+          </ul>
+          <p>Each Summit brings together a diverse mix of industries — reflecting the real makeup of suburban economies.</p>
+          <div class="industries-wrap">
+            <p class="industries-label">Industries Represented</p>
+            <div class="industries-tags">
+              <span class="industry-tag">Trades</span>
+              <span class="industry-tag">Charities</span>
+              <span class="industry-tag">Finance</span>
+              <span class="industry-tag">Professional Services</span>
+              <span class="industry-tag">Manufacturing</span>
+              <span class="industry-tag">Education</span>
+              <span class="industry-tag">Health</span>
+              <span class="industry-tag">Hospitality</span>
+              <span class="industry-tag">Retail</span>
+              <span class="industry-tag">Community Organisations</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-chapter">
+          <p class="about-chapter-label">What You Can Expect</p>
+          <p>Suburban Business Summit offers an environment that is welcoming, practical, and outcomes-driven. Sessions, panels, and networking opportunities are designed to:</p>
+          <ul class="about-list">
+            <li>Spark ideas you can apply immediately</li>
+            <li>Build meaningful, long-term relationships</li>
+            <li>Highlight the vital role suburban businesses play in Australia's economic and social ecosystem</li>
+          </ul>
+          <p>Above all, the Summit exists to support those doing the work on the ground: the business owners, operators, and leaders shaping their communities every day.</p>
+        </div>
+
+        <div class="about-tagline-block">
+          <p>Suburban Business Summit is where local ambition meets practical support and shared success. Backing business. Driving success.</p>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="about-sidebar">
+
+        <div class="sidebar-stat">
+          <p class="sidebar-stat-num">2026</p>
+          <p class="sidebar-stat-label">Series of suburban &amp; regional events launching across Australia</p>
+        </div>
+
+        <div class="sidebar-quote">
+          <p>"When you invest in local business capability, confidence, and connection, the benefits extend far beyond the room."</p>
+        </div>
+
+        <div class="sidebar-cta-card">
+          <h3>Upcoming Events</h3>
+          <p>Northern Beaches — June 30, 2026<br>Illawarra — September 17, 2026</p>
+          <a href="events-northern-beaches.html" class="btn-amber">Book Tickets — June 30</a>
+          <a href="sponsorship-partnership-packages.html" class="btn-outline">Sponsorship &amp; Packages</a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOSTED BY ──────────────────────────────────────────── -->
+<section class="hosted-by">
+  <div class="container">
+    <div class="hosted-by-inner">
+      <p class="hosted-by-label">The Team Behind the Summit</p>
+      <h2 class="hosted-by-title">Hosted By</h2>
+      <div class="host-card">
+        <div class="host-photo-wrap">
+          <img src="images/founder-luke-griffin2.jpg" alt="Luke Griffin" class="host-photo" />
+        </div>
+        <p class="host-name">Luke Griffin</p>
+        <p class="host-title">GCDS &amp; Event Director</p>
+        <a href="https://www.growthcds.com.au" target="_blank" rel="noopener" class="host-website">www.growthcds.com.au</a>
+        <div class="host-contact">
+          <a href="tel:0451248292" class="host-contact-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            0451 248 292
+          </a>
+          <a href="mailto:info@subsummit.com.au" class="host-contact-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            info@subsummit.com.au
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EVENTS CTA ─────────────────────────────────────────── -->
+<section class="events-cta">
+  <div class="container">
+    <div class="events-cta-inner">
+      <div class="event-cta-card">
+        <p class="event-cta-label">Book Now · Open</p>
+        <p class="event-cta-name">Northern Beaches Summit</p>
+        <p class="event-cta-detail">Tuesday, June 30, 2026 · Warriewood Community Centre</p>
+        <a href="events-northern-beaches.html" class="event-cta-btn">View Event &amp; Book Tickets</a>
+      </div>
+      <div class="event-cta-card">
+        <p class="event-cta-label">Coming September</p>
+        <p class="event-cta-name">Illawarra Summit</p>
+        <p class="event-cta-detail">Thursday, September 17, 2026 · Dapto Ribbonwood Centre</p>
+        <a href="events-illawarra.html" class="event-cta-btn">Register Your Interest</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="footer-simple">
+  <div class="container">
+    <div class="footer-simple-inner">
+      <img src="images/logo-suburban-business-summit-dk.png" alt="Suburban Business Summit" class="footer-simple-logo" />
+      <span class="footer-simple-copy">Suburban Business Summit © 2026. All rights reserved</span>
+      <div class="footer-simple-socials">
+        <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
