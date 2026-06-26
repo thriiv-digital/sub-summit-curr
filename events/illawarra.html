@@ -1011,6 +1011,10 @@
       .header.compact .header-logo img { height: 52px; }
       .header > .container { padding: 0 16px; }
     }
+    @media (max-width: 480px) {
+      .speakers-grid, .speakers-grid-3, .speakers-grid-4 { grid-template-columns: 1fr !important; }
+      .speaker-card { max-width: 280px; margin: 0 auto; }
+    }
   </style>
 </head>
 <body>
