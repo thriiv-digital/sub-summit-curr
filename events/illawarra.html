@@ -70,7 +70,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 80px;
+      height: 140px; transition: height 0.3s ease;
       gap: 20px;
     }
 
@@ -81,13 +81,7 @@
       flex-shrink: 0;
     }
 
-    .header-logo img {
-      height: 60px;
-      width: auto;
-      background: #fff;
-      padding: 10px;
-      border-radius: 4px;
-    }
+    .header-logo img { height: 80px; transition: height 0.3s ease; }
 
     .header-right {
       display: flex;
@@ -139,6 +133,8 @@
     }
     .hamburger svg { width: 18px; height: 18px; }
     .hamburger:hover { background: var(--amber-dark); }
+    .header.compact .header-inner { height: 80px; }
+    .header.compact .header-logo img { height: 48px; }
 
     .nav-drawer {
       display: none;
