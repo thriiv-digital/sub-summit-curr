@@ -651,6 +651,25 @@
       background: var(--dark) !important;
       border-bottom: 1px solid rgba(255,255,255,0.08) !important;
     }
+    /* ── MOBILE HEADER + COUNTDOWN ──────────────── */
+    @media (max-width: 768px) {
+      .social-icons { display: none; }
+      .btn-phone span { display: none; }
+      .btn-phone { padding: 10px 12px; border-radius: 50%; width: 42px; height: 42px; justify-content: center; }
+      .btn-phone svg { width: 18px; height: 18px; flex-shrink: 0; }
+      .header-inner { height: 72px; }
+      .header.compact .header-inner { height: 72px; }
+      .header-logo img { height: 52px; }
+      .header.compact .header-logo img { height: 52px; }
+      .header > .container { padding: 0 16px; }
+    }
+    @media (max-width: 768px) {
+      .countdown-unit { width: 62px !important; padding: 10px 8px; }
+      .countdown-num { font-size: 28px !important; }
+      .event-card { padding: 24px 16px; }
+      .event-card-btns { flex-direction: column; }
+      .event-card-btn, .event-card-btn-info { width: 100%; flex: none; }
+    }
   </style>
 </head>
 <body>

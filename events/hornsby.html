@@ -320,6 +320,18 @@
     }
     /* hero: pull up behind fixed header */
     .hero { margin-top: 0; padding-top: 0; min-height: 100vh; }
+    /* ── MOBILE HEADER + COUNTDOWN ──────────────── */
+    @media (max-width: 768px) {
+      .social-icons { display: none; }
+      .btn-phone span { display: none; }
+      .btn-phone { padding: 10px 12px; border-radius: 50%; width: 42px; height: 42px; justify-content: center; }
+      .btn-phone svg { width: 18px; height: 18px; flex-shrink: 0; }
+      .header-inner { height: 72px; }
+      .header.compact .header-inner { height: 72px; }
+      .header-logo img { height: 52px; }
+      .header.compact .header-logo img { height: 52px; }
+      .header > .container { padding: 0 16px; }
+    }
   </style>
 </head>
 <body>

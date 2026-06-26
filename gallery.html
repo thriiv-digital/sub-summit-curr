@@ -345,6 +345,18 @@
     .nav-drawer a.nav-sub { font-size: 15px; padding: 9px 0 9px 16px; color: var(--text-secondary); border-bottom: 1px solid rgba(255,255,255,0.05); font-weight: 600; }
     .nav-drawer a.nav-sub:hover { color: var(--white); }
     hr.footer-divider { display: block; border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 0; }
+    /* ── MOBILE HEADER + COUNTDOWN ──────────────── */
+    @media (max-width: 768px) {
+      .social-icons { display: none; }
+      .btn-phone span { display: none; }
+      .btn-phone { padding: 10px 12px; border-radius: 50%; width: 42px; height: 42px; justify-content: center; }
+      .btn-phone svg { width: 18px; height: 18px; flex-shrink: 0; }
+      .header-inner { height: 72px; }
+      .header.compact .header-inner { height: 72px; }
+      .header-logo img { height: 52px; }
+      .header.compact .header-logo img { height: 52px; }
+      .header > .container { padding: 0 16px; }
+    }
   </style>
 </head>
 <body>
