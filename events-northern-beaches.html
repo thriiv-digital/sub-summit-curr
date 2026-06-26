@@ -548,6 +548,83 @@
       height: 180px;
     }
 
+    .speakers-grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 720px) { .speakers-grid-4 { grid-template-columns: 1fr 1fr; } }
+
+    .travel-block { margin-top: 20px; }
+    .travel-heading {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+    .travel-list {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .travel-list li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .location-travel { margin-bottom: 28px; }
+
+    /* ── ABOUT NB ─────────────────────────────────────────── */
+    .about-nb {
+      padding: 80px 0;
+      background: var(--dark-2);
+    }
+    .about-nb-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 720px) { .about-nb-inner { grid-template-columns: 1fr; gap: 36px; } }
+    .about-nb-img img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      max-height: 420px;
+    }
+    .about-nb-text h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .about-nb-text p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .about-nb-list {
+      padding-left: 20px;
+      margin: 0 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .about-nb-list li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .about-nb-tagline {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--amber) !important;
+      margin-top: 8px;
+    }
+
     /* ── PROGRAM ─────────────────────────────────────────── */
     .program {
       padding: 80px 0;
@@ -973,7 +1050,7 @@
 <section class="panel-feature panel-gold" id="outsourcing-panel">
   <div class="container">
     <h2 class="panel-feature-title" style="text-align:center;margin-bottom:40px;">Redefine Outsourcing in Business</h2>
-    <div class="speakers-grid speakers-grid-3">
+    <div class="speakers-grid speakers-grid-4">
 
       <div class="speaker-card">
         <div class="speaker-photo-wrap">
@@ -1000,6 +1077,46 @@
         </div>
         <p class="speaker-name">Mhairi Holway</p>
         <p class="speaker-role">People Easy</p>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-photo-wrap">
+          <img src="images/speakers/hayden-harvey.jpg" alt="Hayden Harvey" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="speaker-initials" style="display:none">HH</div>
+        </div>
+        <p class="speaker-name">Hayden Harvey</p>
+        <p class="speaker-role">Wise Allies</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CHARITY PANEL ──────────────────────────────────────── -->
+<section class="panel-feature panel-mint" id="charity-panel">
+  <div class="container">
+    <div class="section-header" style="color:#1a1a1a;">
+      <h2 class="panel-feature-title" style="text-align:center;margin-bottom:10px;">Charity Collaboration</h2>
+      <p style="text-align:center;font-size:16px;color:#444;margin-bottom:40px;">How business + community partnerships create impact.</p>
+    </div>
+    <div class="speakers-grid" style="justify-content:center;max-width:560px;margin:0 auto;">
+
+      <div class="speaker-card">
+        <div class="speaker-photo-wrap">
+          <img src="images/speakers/tracy-hall.jpg" alt="Tracy Hall" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="speaker-initials" style="display:none">TH</div>
+        </div>
+        <p class="speaker-name" style="color:#1a1a1a;">Tracy Hall</p>
+        <p class="speaker-role" style="color:#444;"></p>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-photo-wrap">
+          <img src="images/speakers/anna-dengate.jpg" alt="Anna Dengate" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="speaker-initials" style="display:none">AD</div>
+        </div>
+        <p class="speaker-name" style="color:#1a1a1a;">Anna Dengate</p>
+        <p class="speaker-role" style="color:#444;"></p>
       </div>
 
     </div>
@@ -1120,48 +1237,83 @@
 <section class="location" id="location">
   <div class="container">
     <div class="location-inner">
+      <div class="location-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.4!2d151.2744!3d-33.7067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a2b0e3b3c5f5%3A0x5017d681632b360!2sWarrewood+Community+Centre!5e0!3m2!1sen!2sau!4v1"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Warriewood Community Centre map">
+        </iframe>
+      </div>
+
       <div class="location-text">
-        <h2>Venue &amp; Location</h2>
+        <h2>Location and Travel</h2>
+        <p style="color:var(--text-secondary);margin-bottom:24px;line-height:1.7;">Warriewood Community Centre is easy to find whether you're driving or catching public transport.</p>
 
         <div class="location-detail">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="var(--dark-2)"/></svg>
           <div class="location-detail-body">
             <strong>Warriewood Community Centre</strong>
-            <span>Vuko Pl, Warriewood NSW 2102</span>
+            <span>Corner of Jacksons Road and Pittwater Road, Warriewood<br>Next to Boondah Reserve, a short walk from Warriewood Square.</span>
           </div>
         </div>
 
         <div class="location-detail">
           <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           <div class="location-detail-body">
-            <strong>Tuesday, June 30th, 2026</strong>
-            <span>Doors open 8:30am · Summit runs to 3:30pm</span>
+            <strong>Tuesday, June 30th, 2026 · 8:00am – 4:00pm</strong>
           </div>
         </div>
 
-        <div class="location-detail">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <div class="location-detail-body">
-            <strong>After Function: Collaroy Theatre</strong>
-            <span>4:30 – 7:00pm · Relaxed networking &amp; entertainment</span>
+        <div class="location-travel">
+          <div class="travel-block">
+            <p class="travel-heading">By car</p>
+            <ul class="travel-list">
+              <li>From Pittwater Road, turn into <strong>Jacksons Road</strong>.</li>
+              <li>Follow the signs to <strong>Warriewood Community Centre</strong> and the nearby parking areas.</li>
+              <li>Allow a few extra minutes to park and walk to the entrance.</li>
+            </ul>
+          </div>
+          <div class="travel-block">
+            <p class="travel-heading">By bus</p>
+            <ul class="travel-list">
+              <li>Get off near <strong>Warriewood Square</strong> or at a stop near <strong>Jacksons Road</strong> on Pittwater Road.</li>
+              <li>Walk a few minutes along the footpath on Jacksons Road towards Boondah Reserve.</li>
+              <li>The community centre is on the corner, next to the reserve.</li>
+            </ul>
           </div>
         </div>
 
         <div class="location-cta">
           <a href="https://events.humanitix.com/suburban-business-summit-northern-beaches/tickets" target="_blank" rel="noopener noreferrer" class="btn-solid">
-            Book Your Tickets Now
+            Book Your Place Here
           </a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="location-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.8!2d151.2855!3d-33.7170!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a5b5b5b5b5b5%3A0x1!2sWarrieewood+Community+Centre%2C+Vuko+Pl%2C+Warriewood+NSW+2102!5e0!3m2!1sen!2sau!4v1"
-          allowfullscreen
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Warriewood Community Centre map">
-        </iframe>
+<!-- ── ABOUT ──────────────────────────────────────────────── -->
+<section class="about-nb" id="about">
+  <div class="container">
+    <div class="about-nb-inner">
+      <div class="about-nb-img">
+        <img src="images/hero..jpg" alt="Suburban Business Summit" />
+      </div>
+      <div class="about-nb-text">
+        <h2>About Suburban Business Summit</h2>
+        <p>Suburban Business Summit is a one-day event for local business owners, professionals, and community leaders who believe strong local businesses build strong communities.</p>
+        <p>We bring "big conference" ideas, speakers, and connections into suburban and regional areas, close to where you live and work. Our first Summit showed there's real demand for practical, no-hype learning and genuine local connections.</p>
+        <p>In 2026, we're growing into a series of local events across Australia, each with its own community flavour but the same goal: helping local businesses grow, collaborate, and lead. You'll find people from trades, charities, finance, professional services, health, retail, hospitality, education, and more.</p>
+        <p><strong>At each Summit you can expect:</strong></p>
+        <ul class="about-nb-list">
+          <li>Simple, practical ideas you can use straight away</li>
+          <li>Real conversations and relationships that last beyond the day</li>
+          <li>A focus on how suburban businesses power Australia's economy and communities</li>
+        </ul>
+        <p class="about-nb-tagline">Suburban Business Summit is where local ambition meets practical support. Backing business. Driving success.</p>
       </div>
     </div>
   </div>
