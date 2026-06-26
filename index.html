@@ -148,7 +148,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('images/hero.png');
+      background-image: url('images/hero..jpg');
       background-size: cover;
       background-position: center top;
       filter: brightness(0.45);
@@ -276,13 +276,13 @@
       background-image: url('images/baker-street.jpg');
       background-size: cover;
       background-position: center;
-      filter: brightness(0.35);
+      filter: brightness(0.6);
     }
 
     .book-tickets-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(28,28,28,0.6);
+      background: rgba(28,28,28,0.35);
     }
 
     .book-tickets-content {
@@ -368,6 +368,7 @@
       border-radius: var(--radius-lg);
       overflow: hidden;
       background: #000;
+      cursor: pointer;
     }
     .about-video iframe {
       position: absolute;
@@ -375,6 +376,33 @@
       width: 100%;
       height: 100%;
       border: none;
+    }
+    .yt-facade {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .yt-facade img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .yt-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.2);
+      transition: background 0.2s;
+    }
+    .yt-play:hover { background: rgba(0,0,0,0.35); }
+    .yt-play svg {
+      width: 72px;
+      height: 72px;
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.5));
     }
 
     /* ── TESTIMONIALS ───────────────────────────────────── */
@@ -635,26 +663,6 @@
   </div>
 </section>
 
-<!-- ── BUTTON PROMPT ────────────────────────────────────────── -->
-<section class="button-prompt">
-  <div class="container">
-    <div class="button-prompt-inner">
-      <span class="button-prompt-label">Get involved:</span>
-      <a href="https://events.humanitix.com/suburban-business-summit-northern-beaches/tickets" target="_blank" rel="noopener noreferrer" class="btn-solid">
-        Book Tickets
-      </a>
-      <a href="sponsorship.html" class="btn-outline">
-        Become a Sponsor
-      </a>
-      <a href="booking.html" class="btn-outline">
-        Exhibitor Enquiry
-      </a>
-      <a href="tel:0451248292" class="btn-outline">
-        Call Us
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- ── BOOK TICKETS ──────────────────────────────────────────── -->
 <section class="book-tickets" id="book-tickets">
@@ -685,19 +693,27 @@
         <p>We bring "big conference" ideas, speakers, and connections into suburban and regional areas, close to where you live and work. Our first Summit showed there's real demand for practical, no-hype learning and genuine local connections.</p>
         <p>We continue to grow into a series of local events across Australia, each with its own community flavour but the same goal: helping local businesses grow, collaborate and lead.</p>
       </div>
-      <div class="about-video">
-        <!-- Replace VIDEO_ID with the YouTube video ID e.g. dQw4w9WgXcQ -->
-        <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          title="Suburban Business Summit"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+      <div class="about-video" id="yt-player" onclick="playYT()">
+        <div class="yt-facade" id="yt-facade">
+          <img src="https://img.youtube.com/vi/5mbGld10uDM/maxresdefault.jpg" alt="Suburban Business Summit — watch the video" />
+          <div class="yt-play">
+            <!-- YouTube red play button -->
+            <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#ff0000"/>
+              <path d="M45 24L27 14v20" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+<script>
+function playYT() {
+  var player = document.getElementById('yt-player');
+  player.innerHTML = '<iframe src="https://www.youtube.com/embed/5mbGld10uDM?autoplay=1&rel=0" title="Suburban Business Summit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none;"></iframe>';
+}
+</script>
 
 <!-- ── TESTIMONIALS ──────────────────────────────────────────── -->
 <section class="testimonials" id="testimonials">
