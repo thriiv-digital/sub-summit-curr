@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central Coast — Wednesday 18 March 2026 | Suburban Business Summit</title>
+  <meta name="description" content="Suburban Business Summit Central Coast — Gosford Library Function Centre, Wednesday 18 March 2026. A full day for local business owners, professionals and community leaders." />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF5VT3P4T6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HF5VT3P4T6');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --amber: #F5A623;
+      --amber-dark: #D9891A;
+      --dark: #1C1C1C;
+      --dark-2: #242424;
+      --dark-3: #2E2E2E;
+      --white: #FFFFFF;
+      --off-white: #F0EDE8;
+      --text-muted: #A0A0A0;
+      --text-secondary: #CCCCCC;
+      --radius: 6px;
+      --radius-lg: 10px;
+      --max: 1140px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ── HEADER ─────────────────────────────────────────── */
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--dark);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .header-inner {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      height: 80px; gap: 20px;
+    }
+    .header-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .header-logo img { height: 60px; width: auto; background: #fff; padding: 10px; border-radius: 4px; }
+    .header-right { display: flex; align-items: center; gap: 14px; }
+    .btn-phone {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--dark);
+      font-weight: 700; font-size: 14px;
+      padding: 10px 20px; border-radius: 40px;
+      white-space: nowrap; transition: background 0.2s;
+    }
+    .btn-phone:hover { background: var(--amber-dark); }
+    .social-icons { display: flex; align-items: center; gap: 8px; }
+    .social-icon {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+      border: 1.5px solid rgba(255,255,255,0.35); border-radius: 50%;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .social-icon:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    .social-icon svg { width: 16px; height: 16px; fill: var(--white); }
+    .hamburger {
+      display: flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px;
+      background: var(--amber); border-radius: 50%; border: none;
+      cursor: pointer; flex-shrink: 0;
+    }
+    .hamburger svg { width: 18px; height: 18px; }
+    .hamburger:hover { background: var(--amber-dark); }
+
+    .nav-drawer {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.85);
+    }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer-panel {
+      margin-left: auto; width: min(360px, 100%);
+      background: var(--dark-2); height: 100%;
+      padding: 32px 28px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .nav-drawer-close {
+      align-self: flex-end; background: none; border: none;
+      color: var(--white); font-size: 28px; cursor: pointer; margin-bottom: 16px;
+    }
+    .nav-drawer a {
+      display: block; font-size: 20px; font-weight: 700;
+      padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: var(--white);
+    }
+    .nav-drawer a:hover { color: var(--amber); }
+
+    /* ── HERO ───────────────────────────────────────────── */
+    .hero {
+      position: relative; min-height: 640px;
+      display: flex; align-items: center; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('../images/hero..jpg');
+      background-size: cover; background-position: center 5%;
+      filter: brightness(0.55);
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(28,28,28,0.9) 45%, rgba(28,28,28,0.2) 100%);
+    }
+    .hero > .container { width: 100%; }
+    .hero-content { position: relative; z-index: 2; padding: 80px 0; max-width: 660px; }
+    .hero-eyebrow {
+      font-size: 13px; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: clamp(30px, 5vw, 54px); font-weight: 900;
+      line-height: 1.08; letter-spacing: -0.02em; color: var(--white); margin-bottom: 20px;
+    }
+    .hero-meta { display: flex; flex-direction: column; gap: 6px; margin-bottom: 32px; }
+    .hero-meta-row {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 17px; font-weight: 600; color: var(--white);
+    }
+    .hero-meta-row svg { width: 18px; height: 18px; fill: var(--amber); flex-shrink: 0; }
+    .hero-cta { display: flex; flex-direction: column; gap: 12px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--amber); color: var(--dark);
+      font-weight: 800; font-size: 16px; padding: 17px 40px;
+      border-radius: var(--radius); letter-spacing: 0.04em; text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s; align-self: flex-start;
+    }
+    .btn-primary:hover { background: var(--amber-dark); transform: translateY(-1px); }
+
+    /* ── ABOUT ──────────────────────────────────────────── */
+    .about { background: var(--off-white); padding: 80px 0; color: var(--dark); }
+    .about-inner {
+      display: grid; grid-template-columns: 380px 1fr;
+      gap: 60px; align-items: start;
+    }
+    .about-flyer {
+      border-radius: var(--radius-lg);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+      overflow: hidden;
+    }
+    .about-flyer img { width: 100%; height: auto; display: block; }
+    .about-text h2 {
+      font-size: clamp(24px, 3vw, 34px); font-weight: 900;
+      letter-spacing: -0.02em; margin-bottom: 20px; color: var(--dark);
+    }
+    .about-text p {
+      font-size: 16px; color: #444; line-height: 1.8; margin-bottom: 16px;
+    }
+    .about-list { list-style: disc; padding-left: 22px; margin: 8px 0 20px; }
+    .about-list li { font-size: 16px; color: #333; line-height: 1.7; margin-bottom: 8px; }
+    .about-tagline {
+      font-size: 17px; font-weight: 800; color: var(--dark);
+      border-left: 4px solid var(--amber); padding-left: 16px; margin-top: 8px;
+    }
+
+    /* ── PROGRAM ────────────────────────────────────────── */
+    .program { background: #F5A623; padding: 72px 0; }
+    .program-inner { max-width: 900px; margin: 0 auto; }
+    .program h2 {
+      font-size: clamp(22px, 3vw, 32px); font-weight: 900;
+      color: var(--dark); margin-bottom: 8px;
+    }
+    .program-subhead { font-size: 20px; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
+    .program-updated { font-size: 14px; font-style: italic; color: rgba(28,28,28,0.65); margin-bottom: 32px; }
+    .program-mc { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 24px; }
+
+    .program-block { margin-bottom: 28px; }
+    .program-time {
+      font-size: 15px; font-weight: 800; color: var(--dark);
+      margin-bottom: 8px; padding-top: 4px;
+    }
+    .program-time-divider {
+      border-top: 1px solid rgba(28,28,28,0.2);
+      padding-top: 20px; margin-top: 20px;
+    }
+    .program-item { font-size: 15px; color: var(--dark); line-height: 1.6; margin-bottom: 6px; }
+    .program-list { list-style: disc; padding-left: 22px; }
+    .program-list li {
+      font-size: 14px; color: var(--dark); line-height: 1.65;
+      margin-bottom: 10px;
+    }
+    .program-floor-label {
+      font-size: 13px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: rgba(28,28,28,0.6);
+      margin-bottom: 10px; margin-top: 4px;
+    }
+
+    /* ── CTA RIBBON ─────────────────────────────────────── */
+    .cta-ribbon {
+      position: relative; padding: 72px 0; overflow: hidden;
+    }
+    .cta-ribbon-bg {
+      position: absolute; inset: 0;
+      background-image: url('../images/gallery/networking.jpg');
+      background-size: cover; background-position: center;
+      filter: brightness(0.35);
+    }
+    .cta-ribbon-overlay {
+      position: absolute; inset: 0;
+      background: rgba(10,10,10,0.4);
+    }
+    .cta-ribbon-content {
+      position: relative; z-index: 2;
+      max-width: 760px; margin: 0 auto; text-align: center;
+    }
+    .cta-ribbon-title {
+      font-size: clamp(24px, 4vw, 40px); font-weight: 900;
+      color: var(--white); letter-spacing: -0.01em; margin-bottom: 16px;
+    }
+    .cta-ribbon-intro {
+      font-size: 17px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.65;
+    }
+    .cta-ribbon-list {
+      list-style: disc; text-align: left; display: inline-block;
+      padding-left: 22px; margin-bottom: 20px;
+    }
+    .cta-ribbon-list li {
+      font-weight: 700; font-size: 16px; color: var(--white);
+      line-height: 1.65; margin-bottom: 10px;
+    }
+    .cta-ribbon-closing {
+      font-size: 16px; color: var(--text-secondary); margin-bottom: 32px;
+    }
+    .cta-ribbon-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-cta-primary {
+      display: inline-flex; align-items: center;
+      background: var(--amber); color: var(--dark);
+      font-weight: 800; font-size: 15px; letter-spacing: 0.04em;
+      text-transform: uppercase; padding: 16px 36px;
+      border-radius: var(--radius); transition: background 0.2s;
+    }
+    .btn-cta-primary:hover { background: var(--amber-dark); }
+    .btn-cta-outline {
+      display: inline-flex; align-items: center;
+      border: 2px solid var(--white); color: var(--white);
+      font-weight: 700; font-size: 15px;
+      padding: 14px 32px; border-radius: var(--radius);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cta-outline:hover { background: var(--white); color: var(--dark); }
+
+    /* ── LOCATION ───────────────────────────────────────── */
+    .location { background: var(--off-white); padding: 80px 0; color: var(--dark); }
+    .location-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+    }
+    .location-map {
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+    .location-map iframe { width: 100%; height: 380px; border: 0; display: block; }
+    .location-text h2 {
+      font-size: clamp(24px, 3vw, 36px); font-weight: 900;
+      letter-spacing: -0.02em; margin-bottom: 20px; color: var(--dark);
+    }
+    .location-address { font-size: 16px; color: #333; line-height: 1.8; margin-bottom: 24px; }
+    .location-address a { color: #006fbb; text-decoration: underline; }
+    .location-block { margin-bottom: 24px; }
+    .location-block h3 {
+      font-size: 16px; font-weight: 800; color: var(--dark); margin-bottom: 8px;
+    }
+    .location-block p { font-size: 15px; color: #444; line-height: 1.75; margin-bottom: 8px; }
+    .location-block p strong { color: var(--dark); }
+
+    /* ── PARTICIPANTS ────────────────────────────────────── */
+    .participants { background: #1f3d38; padding: 72px 0; }
+    .participants-header { text-align: center; margin-bottom: 48px; }
+    .participants-header h2 {
+      font-size: clamp(26px, 3.5vw, 40px); font-weight: 900;
+      color: var(--white); margin-bottom: 14px;
+    }
+    .participants-header p { font-size: 16px; color: rgba(255,255,255,0.7); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+    .participants-header p strong { color: var(--white); }
+
+    .logo-carousel { position: relative; overflow: hidden; }
+    .logo-track {
+      display: flex; gap: 20px;
+      transition: transform 0.4s ease;
+    }
+    .logo-tile {
+      flex: 0 0 calc((100% - 80px) / 5);
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 110px;
+    }
+    .logo-tile img { max-height: 60px; max-width: 100%; object-fit: contain; }
+    .logo-tile-name {
+      font-size: 13px; font-weight: 700; color: #333; text-align: center; line-height: 1.4;
+    }
+    .carousel-dots {
+      display: flex; justify-content: center; gap: 8px; margin-top: 28px;
+    }
+    .carousel-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,0.3); cursor: pointer; border: none;
+      transition: background 0.2s;
+    }
+    .carousel-dot.active { background: var(--white); }
+    .carousel-nav {
+      display: flex; justify-content: center; gap: 12px; margin-top: 20px;
+    }
+    .carousel-btn {
+      background: rgba(255,255,255,0.15); border: none; border-radius: 50%;
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--white); transition: background 0.2s;
+    }
+    .carousel-btn:hover { background: rgba(255,255,255,0.3); }
+    .carousel-btn svg { width: 18px; height: 18px; }
+
+    /* ── FOOTER ─────────────────────────────────────────── */
+    .footer { background: var(--dark-2); border-top: 1px solid rgba(255,255,255,0.07); padding: 28px 0; }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .footer-logo { height: 36px; }
+    .footer-copy { font-size: 13px; color: var(--text-muted); }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social {
+      width: 32px; height: 32px; background: rgba(255,255,255,0.08);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    }
+    .footer-social svg { width: 15px; height: 15px; fill: var(--white); }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .about-inner { grid-template-columns: 1fr; }
+      .about-flyer { max-width: 420px; margin: 0 auto; }
+      .location-inner { grid-template-columns: 1fr; }
+      .logo-tile { flex: 0 0 calc((100% - 40px) / 3); }
+    }
+    @media (max-width: 600px) {
+      .btn-phone span { display: none; }
+      .social-icons { display: none; }
+      .hero-content { padding: 60px 0; }
+      .logo-tile { flex: 0 0 calc((100% - 20px) / 2); }
+      .footer-inner { justify-content: center; text-align: center; }
+      .cta-ribbon-btns { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ────────────────────────────────────────────── -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="header-logo">
+        <img src="../images/logo.png" alt="Suburban Business Summit" />
+      </a>
+      <div class="header-right">
+        <a href="tel:0451248292" class="btn-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          <span>Call Us On 0451 248 292</span>
+        </a>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <button class="hamburger" onclick="document.getElementById('navDrawer').classList.toggle('open')" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--dark)" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-drawer" id="navDrawer" onclick="this.classList.remove('open')">
+  <div class="nav-drawer-panel" onclick="event.stopPropagation()">
+    <button class="nav-drawer-close" onclick="document.getElementById('navDrawer').classList.remove('open')">&times;</button>
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="northern-beaches.html">Northern Beaches — June 2026</a>
+    <a href="central-coast.html">Central Coast — March 2026</a>
+    <a href="illawarra.html">Illawarra — September 2026</a>
+    <a href="../sponsorship-partnership-packages.html">Sponsorship &amp; Packages</a>
+    <a href="../booking-form.html">Sponsor &amp; Exhibition Booking</a>
+    <a href="../gallery.html">Gallery</a>
+    <a href="../contact.html">Contact Us</a>
+    <a href="tel:0451248292" style="color: var(--amber); margin-top: 16px;">Call 0451 248 292</a>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Next Event:</p>
+      <h1 class="hero-title">Suburban Business Summit — Central Coast</h1>
+      <div class="hero-meta">
+        <div class="hero-meta-row">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Gosford Library Function Centre, Gosford
+        </div>
+        <div class="hero-meta-row">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5C3.89 4 3 4.9 3 6v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+          Wednesday, March 18th, 2026
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="../contact.html" class="btn-primary">Register Your Interest</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ─────────────────────────────────────────────── -->
+<section class="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-flyer">
+        <img src="../images/central-coast-flyer.jpg" alt="Suburban Business Summit Central Coast 2026 Event Flyer" />
+      </div>
+      <div class="about-text">
+        <h2>About Suburban Business Summit</h2>
+        <p>Suburban Business Summit is a one-day event for local business owners, professionals, and community leaders who believe strong local businesses build strong communities.</p>
+        <p>We bring "big conference" ideas, speakers, and connections into suburban and regional areas, close to where you live and work. Our first Summit showed there's real demand for practical, no-hype learning and genuine local connections.</p>
+        <p>In 2026, we're growing into a series of local events across Australia, each with its own community flavour but the same goal: helping local businesses grow, collaborate, and lead. You'll find people from trades, charities, finance, professional services, health, retail, hospitality, education, and more.</p>
+        <p>At each Summit you can expect:</p>
+        <ul class="about-list">
+          <li>Simple, practical ideas you can use straight away</li>
+          <li>Real conversations and relationships that last beyond the day</li>
+          <li>A focus on how suburban businesses power Australia's economy and communities</li>
+        </ul>
+        <p class="about-tagline">Suburban Business Summit is where local ambition meets practical support. Backing business. Driving success.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROGRAM ────────────────────────────────────────────── -->
+<section class="program">
+  <div class="container">
+    <div class="program-inner">
+      <h2>Suburban Business Summit — Central Coast</h2>
+      <p class="program-subhead">2026 Event Program</p>
+      <p class="program-updated">Updated: 16/03/26 11:20pm</p>
+      <p class="program-mc">MC: Derek Abel — Owner/Producer — Your Story</p>
+
+      <div class="program-block">
+        <p class="program-time">8:30 AM — Arrival Tea &amp; Coffee — Exhibitor Floor Open</p>
+        <div class="program-floor-label">Meet exhibitors</div>
+        <ul class="program-list">
+          <li>UON, FWD Focus, AI Collab, SBNG, CCWH, The Bikers Hand, Ronald McDonald House, Central Coast Studios, East Coast Beverages, My Three Beans, FairPlay Entertainment and more.</li>
+        </ul>
+      </div>
+
+      <div class="program-block program-time-divider">
+        <p class="program-time">9:20 AM — Welcome Address &amp; Acknowledgement to Country — David Abrahams</p>
+        <ul class="program-list">
+          <li>Central Coast Business Story — "Present &amp; Future" — Kim Fernandez (AI Collab), Bill Murch (SBNG) &amp; David Abrahams (Central Coast News). Hosted by Mel Archer — The Foundry</li>
+          <li>Presentation — UON/I2N Feature — Jax Garrett — Central Coast Campus</li>
+          <li>Spotlight — "The taste of the Central Coast" — created &amp; inspired by Chef Daniel</li>
+        </ul>
+      </div>
+
+      <div class="program-block program-time-divider">
+        <p class="program-time">10:30 AM — Morning Tea — Championed by Chef Daniel</p>
+        <div class="program-floor-label">Exhibitor Floor Open</div>
+        <ul class="program-list">
+          <li>Ambassador — "Ice Breaker" — Richelle Bennett — Keeping Me Keeping You</li>
+          <li>Panel — "Hollywood on the Central Coast" — Craig &amp; Amanda Giles (Founder/Director CCS), John MacNamurra (Chairperson, Economic Development Committee), Stephen Machia (Noisy Nit Games), Sam Lukins (Production Designer, Art Department — Wolverine, X-Men), Petrina Waddell (Workforce &amp; Strategic Growth Advisor)</li>
+          <li>Inspirational — "Driving a Values-Based Business" — JBAM Tyrepower — Blain Vandersteen, Director</li>
+          <li>Panel — "Local Business for Charity" — Tony Davis (The Bikers Hand), Garth Prestwridge (Ronald McDonald Houses North NSW), Sara Foster (Central Coast Women's Health). Hosted by Aarti Soni — Tap4Change</li>
+        </ul>
+      </div>
+
+      <div class="program-block program-time-divider">
+        <p class="program-time">1:00 PM — 2:00 PM — Lunch &amp; Networking — Catered by Living Gourmet and Fork &amp; Knife</p>
+        <div class="program-floor-label">Exhibitor Floor Open</div>
+        <ul class="program-list">
+          <li>Spotlight — "Shining a Light on the Gosford Strip Precinct" — Mel Archer — The Foundry</li>
+          <li>Panel — "Services for Local Business" — Tash Robertson (Coasties Magazine), Richelle Bennett (Keeping Me Keeping You), Gabrielle Blanch (JBAM Tyrepower). Hosted by Jenny Benedek — FWD Focus</li>
+          <li>Charity Raffle Drawn</li>
+          <li>Directors Reflections — Core Success Network and Growth Concept Development Services</li>
+        </ul>
+      </div>
+
+      <div class="program-block program-time-divider">
+        <p class="program-time">4:00 PM – 6:00 PM — Networking Drinks — Funhaus Factory</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA RIBBON ─────────────────────────────────────────── -->
+<section class="cta-ribbon">
+  <div class="cta-ribbon-bg"></div>
+  <div class="cta-ribbon-overlay"></div>
+  <div class="container">
+    <div class="cta-ribbon-content">
+      <h2 class="cta-ribbon-title">Join Us at the Next Central Coast Summit</h2>
+      <p class="cta-ribbon-intro">Be part of a full day dedicated to Central Coast business and leave with ideas and opportunities you can use straight away.</p>
+      <ul class="cta-ribbon-list">
+        <li>Hear real stories and practical insights from local leaders and innovators.</li>
+        <li>Get warm introductions to charities, trades, community leaders and ecosystem partners who back local business.</li>
+        <li>Put your business in front of local decision-makers and potential customers in one place.</li>
+      </ul>
+      <p class="cta-ribbon-closing">Register your interest and be first to know when tickets open for the next Central Coast event.</p>
+      <div class="cta-ribbon-btns">
+        <a href="../contact.html" class="btn-cta-primary">Register Your Interest</a>
+        <a href="../sponsorship-partnership-packages.html" class="btn-cta-outline">Sponsorship Packages</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOCATION ───────────────────────────────────────────── -->
+<section class="location">
+  <div class="container">
+    <div class="location-inner">
+      <div class="location-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.7!2d151.341!3d-33.4286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b72d66dac2c1f77%3A0xb7e4a87cce71f14e!2s123a%20Donnison%20St%2C%20Gosford%20NSW%202250!5e0!3m2!1sen!2sau!4v1700000000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Gosford Library Function Centre map">
+        </iframe>
+      </div>
+      <div class="location-text">
+        <h2>Location</h2>
+        <div class="location-address">
+          <p>Gosford Regional Function Centre</p>
+          <p>Level 1, Gosford Library</p>
+          <p><a href="https://maps.google.com/?q=123a+Donnison+St,+Gosford+NSW+2250" target="_blank" rel="noopener">123a Donnison St, Gosford NSW 2250 (click for Google Maps)</a></p>
+        </div>
+
+        <div class="location-block">
+          <h3>Getting There</h3>
+          <p><strong>By train:</strong> Gosford Station is an easy 5–7 minute walk from the library. Exit towards the CBD and follow the signs to Donnison Street.</p>
+          <p><strong>Drop-off:</strong> There is a short-term drop-off area at the front of the library on Donnison Street, ideal for passengers or accessibility drop-offs.</p>
+        </div>
+
+        <div class="location-block">
+          <h3>Access Inside the Venue</h3>
+          <p>The event is in the function/auditorium space on <strong>Level 1</strong>. Access is available via both <strong>stairs</strong> and a lift from the ground floor.</p>
+          <p>All public areas have step-free routes, with an accessible entrance and accessible toilets on the ground level.</p>
+        </div>
+
+        <div class="location-block">
+          <h3>Parking</h3>
+          <p>The closest large car park is <strong>Gosford City Car Park, 1 Baker Street</strong>, a short walk to the library.</p>
+          <p>There is limited street parking on <strong>Donnison Street and Mann Street</strong>, so please allow extra time to find a space.</p>
+          <p>For all-day/free parking, you can use commuter car parks at <strong>Adcock Park</strong> or <strong>Racecourse Road, West Gosford</strong>, then walk or take public transport into the CBD.</p>
+          <p>We recommend arriving a little earlier to allow time for parking and the short walk to the venue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EVENT PARTICIPANTS ──────────────────────────────────── -->
+<section class="participants">
+  <div class="container">
+    <div class="participants-header">
+      <h2>Event Participants</h2>
+      <p>Our <strong>partners, sponsors, and collaborators</strong> form a strong support network that helps make each event possible and amplifies its impact for the wider community.</p>
+    </div>
+    <div class="logo-carousel">
+      <div class="logo-track" id="logoTrack">
+        <div class="logo-tile"><span class="logo-tile-name">The Foundry<br>Cowork</span></div>
+        <div class="logo-tile"><span class="logo-tile-name">Central Coast<br>Studios</span></div>
+        <div class="logo-tile"><span class="logo-tile-name">Central Coast<br>SBNG</span></div>
+        <div class="logo-tile"><span class="logo-tile-name">My Three Beans<br>Coffee</span></div>
+        <div class="logo-tile"><span class="logo-tile-name">DryEye<br>Solution</span></div>
+        <div class="logo-tile"><span class="logo-tile-name">FWD<br>Focus</span></div>
+        <div class="logo-tile"><span class="logo-tile-name">AI<br>Collab</span></div>
+        <div class="logo-tile"><span class="logo-tile-name">Coasties<br>Magazine</span></div>
+        <div class="logo-tile"><span class="logo-tile-name">Ronald McDonald<br>House</span></div>
+        <div class="logo-tile"><span class="logo-tile-name">JBAM<br>Tyrepower</span></div>
+        <div class="logo-tile"><span class="logo-tile-name">Funhaus<br>Factory</span></div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="prevBtn" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="carousel-btn" id="nextBtn" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <img src="../images/logo.png" alt="Suburban Business Summit" class="footer-logo" style="background:#fff;padding:6px 8px;border-radius:4px;" />
+      <span class="footer-copy">Suburban Business Summit © 2026. All rights reserved</span>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple carousel for logo tiles
+  var track = document.getElementById('logoTrack');
+  var tiles = track.children;
+  var step = 0;
+
+  function getVisible() {
+    var w = window.innerWidth;
+    if (w < 600) return 2;
+    if (w < 900) return 3;
+    return 5;
+  }
+
+  function maxStep() {
+    return Math.max(0, tiles.length - getVisible());
+  }
+
+  function updateCarousel() {
+    var vis = getVisible();
+    var tileWidth = (track.parentElement.offsetWidth - (vis - 1) * 20) / vis;
+    for (var i = 0; i < tiles.length; i++) {
+      tiles[i].style.flex = '0 0 ' + tileWidth + 'px';
+    }
+    track.style.transform = 'translateX(-' + (step * (tileWidth + 20)) + 'px)';
+  }
+
+  document.getElementById('nextBtn').addEventListener('click', function() {
+    if (step < maxStep()) { step++; updateCarousel(); }
+  });
+  document.getElementById('prevBtn').addEventListener('click', function() {
+    if (step > 0) { step--; updateCarousel(); }
+  });
+
+  window.addEventListener('resize', function() {
+    if (step > maxStep()) step = maxStep();
+    updateCarousel();
+  });
+
+  updateCarousel();
+</script>
+
+</body>
+</html>
