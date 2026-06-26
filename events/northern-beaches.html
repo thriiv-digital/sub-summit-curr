@@ -960,9 +960,7 @@
       border-bottom: 1px solid rgba(255,255,255,0.08) !important;
     }
     /* hero: pull up behind fixed header */
-    /* hero-content-override */
-    .hero-content { padding-top: 160px !important; padding-bottom: 60px !important; }
-    .hero { min-height: 0; height: 70vh; }
+    .hero { margin-top: 0; padding-top: 0; min-height: 78vh; }
   </style>
 </head>
 <body>
@@ -1037,11 +1035,13 @@
       </div>
     </div>
   </div>
+</section>
 
+<!-- ── COUNTDOWN ─────────────────────────────────────────────── -->
 <div class="countdown-bar">
   <div class="container">
     <div class="countdown-inner">
-      <span class="countdown-label">Event Starts In</span>
+      <span class="countdown-label">Event starts in</span>
       <div class="countdown-units">
         <div class="countdown-unit"><span class="countdown-num" id="cd-days">--</span><span class="countdown-lbl">Days</span></div>
         <span class="countdown-sep">:</span>
@@ -1055,20 +1055,26 @@
   </div>
 </div>
 <script>
-(function(){
-  var target = new Date("2026-06-30T08:00:00+10:00").getTime();
-  function tick(){
-    var diff = target - Date.now();
-    if(diff<=0){document.querySelector('.countdown-bar').style.display='none';return;}
-    document.getElementById('cd-days').textContent=String(Math.floor(diff/86400000)).padStart(2,'0');
-    document.getElementById('cd-hrs').textContent=String(Math.floor(diff%86400000/3600000)).padStart(2,'0');
-    document.getElementById('cd-min').textContent=String(Math.floor(diff%3600000/60000)).padStart(2,'0');
-    document.getElementById('cd-sec').textContent=String(Math.floor(diff%60000/1000)).padStart(2,'0');
-  }
-  tick(); setInterval(tick,1000);
-})();
+  (function() {
+    var target = new Date("2026-06-30T08:00:00+10:00").getTime();
+    function tick() {
+      var now = Date.now(), diff = target - now;
+      if (diff <= 0) { document.querySelector(".countdown-bar").style.display = "none"; return; }
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      document.getElementById("cd-days").textContent = String(d).padStart(2,"0");
+      document.getElementById("cd-hrs").textContent  = String(h).padStart(2,"0");
+      document.getElementById("cd-min").textContent  = String(m).padStart(2,"0");
+      document.getElementById("cd-sec").textContent  = String(s).padStart(2,"0");
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
 </script>
-<!-- ── COUNTDOWN ─────────────────────────────────────────────── -->
+
+
 <!-- ── BOOK TICKETS NOW ───────────────────────────────────── -->
 <section class="book-now" id="book">
   <div class="book-now-bg"></div>
@@ -1415,8 +1421,6 @@
 </section>
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
-
-
 <footer class="site-footer">
   <div class="container">
     <div class="footer-top">
