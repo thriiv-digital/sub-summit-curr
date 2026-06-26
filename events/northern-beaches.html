@@ -338,7 +338,8 @@
       background: var(--dark);
       border-radius: 6px;
       padding: 8px 14px;
-      min-width: 60px;
+      width: 70px;
+      flex-shrink: 0;
     }
 
     .countdown-num {
@@ -718,6 +719,8 @@
       border: 1px solid rgba(255,255,255,0.09);
       border-radius: var(--radius-lg);
       overflow: hidden;
+      max-width: 860px;
+      margin: 0 auto;
     }
 
     .schedule-row {
@@ -879,7 +882,7 @@
     .cta-banner h2 {
       font-size: clamp(24px, 3.5vw, 38px);
       font-weight: 900;
-      color: var(--dark);
+      color: var(--white);
       margin-bottom: 28px;
       letter-spacing: -0.02em;
     }
@@ -907,15 +910,15 @@
     .btn-dark-outline {
       display: inline-flex;
       align-items: center;
-      border: 2px solid var(--dark);
-      color: var(--dark);
+      border: 2px solid rgba(255,255,255,0.8);
+      color: var(--white);
       font-weight: 700;
       font-size: 15px;
       padding: 14px 32px;
       border-radius: var(--radius);
       transition: background 0.2s;
     }
-    .btn-dark-outline:hover { background: rgba(0,0,0,0.1); }
+    .btn-dark-outline:hover { background: rgba(255,255,255,0.1); }
 
     /* ── FOOTER ──────────────────────────────────────────── */
     .footer-simple {
