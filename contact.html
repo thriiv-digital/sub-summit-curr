@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Suburban Business Summit</title>
+  <meta name="description" content="Get in touch with the Suburban Business Summit team. General enquiries, speaking, sponsorship, or tickets — we'd love to hear from you." />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF5VT3P4T6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HF5VT3P4T6');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --amber: #F5A623;
+      --amber-dark: #D9891A;
+      --dark: #1C1C1C;
+      --dark-2: #242424;
+      --dark-3: #2E2E2E;
+      --white: #FFFFFF;
+      --text-muted: #A0A0A0;
+      --text-secondary: #CCCCCC;
+      --radius: 6px;
+      --radius-lg: 10px;
+      --max: 1140px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ── HEADER ─────────────────────────────────────────── */
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--dark-2);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    .header-inner {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      height: 68px; gap: 20px;
+    }
+    .header-logo img { height: 48px; }
+    .header-right { display: flex; align-items: center; gap: 16px; }
+    .btn-phone {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 14px; font-weight: 700; color: var(--white);
+      background: rgba(255,255,255,0.08); border-radius: var(--radius);
+      padding: 8px 14px; transition: background 0.2s;
+    }
+    .btn-phone:hover { background: rgba(255,255,255,0.15); }
+    .social-icons { display: flex; gap: 10px; }
+    .social-icon {
+      width: 32px; height: 32px; background: rgba(255,255,255,0.08);
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; transition: background 0.2s;
+    }
+    .social-icon:hover { background: rgba(255,255,255,0.18); }
+    .social-icon svg { width: 15px; height: 15px; fill: var(--white); stroke: none; }
+    .hamburger {
+      background: rgba(255,255,255,0.1); border: none; border-radius: var(--radius);
+      width: 38px; height: 38px; display: flex; align-items: center;
+      justify-content: center; cursor: pointer; transition: background 0.2s;
+    }
+    .hamburger svg { width: 18px; height: 18px; }
+    .hamburger:hover { background: var(--amber); }
+
+    .nav-drawer {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.85);
+    }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer-panel {
+      margin-left: auto; width: min(360px, 100%);
+      background: var(--dark-2); height: 100%;
+      padding: 32px 28px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .nav-drawer-close {
+      align-self: flex-end; background: none; border: none;
+      color: var(--white); font-size: 28px; cursor: pointer; margin-bottom: 16px;
+    }
+    .nav-drawer a {
+      display: block; font-size: 20px; font-weight: 700;
+      padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: var(--white);
+    }
+    .nav-drawer a:hover { color: var(--amber); }
+
+    /* ── HERO ───────────────────────────────────────────── */
+    .page-hero {
+      background: var(--dark-2);
+      padding: 64px 0 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .page-hero-eyebrow {
+      font-size: 12px; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .page-hero-title {
+      font-size: clamp(32px, 5vw, 52px); font-weight: 900;
+      line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 16px;
+    }
+    .page-hero-sub {
+      font-size: 17px; color: var(--text-secondary); max-width: 560px; line-height: 1.7;
+    }
+
+    /* ── MAIN LAYOUT ────────────────────────────────────── */
+    .contact-section { padding: 64px 0 80px; }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* ── FORM CARD ──────────────────────────────────────── */
+    .form-card {
+      background: var(--dark-2); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg); padding: 40px;
+    }
+    .form-card h2 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+    .form-card-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; line-height: 1.6; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+    .form-group:last-of-type { margin-bottom: 0; }
+
+    label { font-size: 13px; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.02em; }
+    label .req { color: var(--amber); margin-left: 2px; }
+
+    input, select, textarea {
+      width: 100%; background: var(--dark-3);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius); color: var(--white);
+      font-family: inherit; font-size: 15px; padding: 12px 16px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none; -webkit-appearance: none;
+    }
+    input::placeholder, textarea::placeholder { color: var(--text-muted); }
+    input:focus, select:focus, textarea:focus {
+      outline: none; border-color: var(--amber);
+      box-shadow: 0 0 0 3px rgba(245,166,35,0.15);
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23A0A0A0' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center;
+      padding-right: 40px; cursor: pointer;
+    }
+    select option { background: var(--dark-3); color: var(--white); }
+    textarea { resize: vertical; min-height: 120px; line-height: 1.6; }
+
+    .btn-submit {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; background: var(--amber); color: var(--dark);
+      font-family: inherit; font-size: 16px; font-weight: 800;
+      padding: 16px 32px; border-radius: var(--radius); border: none;
+      cursor: pointer; transition: background 0.2s, transform 0.1s;
+      margin-top: 28px;
+    }
+    .btn-submit:hover { background: var(--amber-dark); }
+    .btn-submit:active { transform: scale(0.98); }
+    .btn-submit svg { width: 18px; height: 18px; }
+
+    .form-note { font-size: 12px; color: var(--text-muted); margin-top: 14px; text-align: center; line-height: 1.6; }
+
+    .form-success {
+      display: none; background: rgba(74,124,89,0.15);
+      border: 1px solid rgba(74,124,89,0.4); border-radius: var(--radius);
+      padding: 20px 24px; margin-top: 24px; color: #7ecb96; font-size: 15px; line-height: 1.6;
+    }
+    .form-success.show { display: block; }
+    .form-error {
+      display: none; background: rgba(200,50,50,0.12);
+      border: 1px solid rgba(200,50,50,0.3); border-radius: var(--radius);
+      padding: 16px 20px; margin-top: 16px; color: #f08080; font-size: 14px;
+    }
+    .form-error.show { display: block; }
+
+    /* ── SIDEBAR ────────────────────────────────────────── */
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+    .sidebar-card {
+      background: var(--dark-2); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg); padding: 28px;
+    }
+
+    /* Luke card */
+    .luke-card { text-align: center; }
+    .luke-photo-wrap {
+      width: 120px; height: 120px; border-radius: 50%;
+      overflow: hidden; margin: 0 auto 16px;
+      border: 2px solid var(--amber);
+    }
+    .luke-photo { width: 110%; height: 110%; margin: -5%; object-fit: cover; }
+    .luke-name { font-size: 18px; font-weight: 900; margin-bottom: 4px; }
+    .luke-role { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5; }
+    .luke-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin-bottom: 14px; }
+    .luke-links { display: flex; flex-direction: column; gap: 10px; }
+    .luke-link {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; font-weight: 600; color: var(--white);
+      background: var(--dark-3); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius); padding: 10px 14px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .luke-link:hover { border-color: var(--amber); color: var(--amber); }
+    .luke-link svg { width: 15px; height: 15px; flex-shrink: 0; color: var(--amber); }
+
+    /* Events card */
+    .sidebar-card h3 { font-size: 14px; font-weight: 800; color: var(--amber); margin-bottom: 16px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .event-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding-bottom: 16px; margin-bottom: 4px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .event-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+    .event-dot { width: 8px; height: 8px; background: var(--amber); border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+    .event-name { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .event-detail { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-bottom: 8px; }
+    .event-link {
+      display: inline-block; font-size: 12px; font-weight: 700;
+      color: var(--amber); border: 1px solid rgba(245,166,35,0.3);
+      border-radius: 4px; padding: 4px 10px; transition: background 0.2s;
+    }
+    .event-link:hover { background: rgba(245,166,35,0.12); }
+
+    /* Social card */
+    .social-card-links { display: flex; gap: 12px; justify-content: center; margin-top: 14px; }
+    .social-card-link {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 700; color: var(--white);
+      background: var(--dark-3); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius); padding: 9px 14px;
+      transition: border-color 0.2s, color 0.2s; flex: 1; justify-content: center;
+    }
+    .social-card-link:hover { border-color: var(--amber); color: var(--amber); }
+    .social-card-link svg { width: 15px; height: 15px; flex-shrink: 0; fill: currentColor; }
+
+    /* ── FOOTER ─────────────────────────────────────────── */
+    .footer-simple {
+      background: var(--dark-2); border-top: 1px solid rgba(255,255,255,0.07); padding: 28px 0;
+    }
+    .footer-simple-inner {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .footer-logo { height: 36px; }
+    .footer-copy { font-size: 13px; color: var(--text-muted); }
+    .footer-socials { display: flex; gap: 10px; }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .sidebar { order: -1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+      .luke-card { grid-column: 1 / -1; }
+    }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .form-card { padding: 28px 20px; }
+      .sidebar { grid-template-columns: 1fr; }
+      .btn-phone span { display: none; }
+      .social-icons { display: none; }
+      .footer-simple-inner { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ────────────────────────────────────────────── -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="images/logo-suburban-business-summit-dk.png" alt="Suburban Business Summit" />
+      </a>
+      <div class="header-right">
+        <a href="tel:0451248292" class="btn-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          <span>Call Us On 0451 248 292</span>
+        </a>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <button class="hamburger" onclick="document.getElementById('navDrawer').classList.toggle('open')" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-drawer" id="navDrawer" onclick="this.classList.remove('open')">
+  <div class="nav-drawer-panel" onclick="event.stopPropagation()">
+    <button class="nav-drawer-close" onclick="document.getElementById('navDrawer').classList.remove('open')">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="events-northern-beaches.html">Northern Beaches — June 2026</a>
+    <a href="events-illawarra.html">Illawarra — September 2026</a>
+    <a href="sponsorship-partnership-packages.html">Sponsorship &amp; Packages</a>
+    <a href="booking-form.html">Sponsor &amp; Exhibition Booking</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="tel:0451248292" style="color: var(--amber); margin-top: 16px;">Call 0451 248 292</a>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+    <p class="page-hero-eyebrow">We'd Love to Hear From You</p>
+    <h1 class="page-hero-title">Get in Touch</h1>
+    <p class="page-hero-sub">Whether you're interested in tickets, sponsorship, speaking, or just have a question — send us a message and we'll get back to you promptly.</p>
+  </div>
+</section>
+
+<!-- ── CONTACT ────────────────────────────────────────────── -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- FORM -->
+      <div class="form-card">
+        <h2>Send Us a Message</h2>
+        <p class="form-card-sub">We reply to all enquiries within 1–2 business days.</p>
+
+        <form id="contactForm" action="https://formspree.io/f/xnjkdaoa" method="POST">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="First and last name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number <span style="color:var(--text-muted);font-weight:400;">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="04xx xxx xxx" />
+            </div>
+            <div class="form-group">
+              <label for="enquiry_type">Enquiry Type <span class="req">*</span></label>
+              <select id="enquiry_type" name="enquiry_type" required>
+                <option value="" disabled selected>Please select</option>
+                <option value="General Enquiry">General Enquiry</option>
+                <option value="Tickets">Tickets</option>
+                <option value="Sponsorship or Exhibition">Sponsorship or Exhibition</option>
+                <option value="Speaking Opportunity">Speaking Opportunity</option>
+                <option value="Media or Press">Media or Press</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+          </div>
+
+          <input type="hidden" name="_subject" value="New Contact Enquiry — Suburban Business Summit" />
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+
+          <div class="form-success" id="formSuccess">
+            <strong>Message received — thank you!</strong><br>
+            We'll be in touch within 1–2 business days.
+          </div>
+          <div class="form-error" id="formError">
+            Something went wrong. Please try again or email us directly at <a href="mailto:info@subsummit.com.au" style="color:var(--amber);">info@subsummit.com.au</a>.
+          </div>
+
+          <p class="form-note">Your details will not be shared with third parties.</p>
+        </form>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <!-- Luke -->
+        <div class="sidebar-card luke-card">
+          <div class="luke-photo-wrap">
+            <img src="images/founder-luke-griffin2.jpg" alt="Luke Griffin" class="luke-photo" />
+          </div>
+          <p class="luke-name">Luke Griffin</p>
+          <p class="luke-role">Co-Director &amp; Event Director<br>Partnerships &amp; Program Creator</p>
+          <hr class="luke-divider" />
+          <div class="luke-links">
+            <a href="tel:0451248292" class="luke-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              Call 0451 248 292
+            </a>
+            <a href="sms:0451248292" class="luke-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Text 0451 248 292
+            </a>
+            <a href="mailto:info@subsummit.com.au" class="luke-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              info@subsummit.com.au
+            </a>
+          </div>
+        </div>
+
+        <!-- Coming Events -->
+        <div class="sidebar-card">
+          <h3>Coming Events</h3>
+          <div class="event-item">
+            <div class="event-dot"></div>
+            <div>
+              <p class="event-name">Northern Beaches</p>
+              <p class="event-detail">Tuesday, June 30, 2026<br>Warriewood Community Centre</p>
+              <a href="events-northern-beaches.html" class="event-link">Book Tickets →</a>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-dot"></div>
+            <div>
+              <p class="event-name">Illawarra</p>
+              <p class="event-detail">Thursday, September 17, 2026<br>Dapto Ribbonwood Centre</p>
+              <a href="events-illawarra.html" class="event-link">Register Interest →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="sidebar-card">
+          <h3>Follow Along</h3>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">Stay up to date with speakers, events, and news.</p>
+          <div class="social-card-links">
+            <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-card-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-card-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+              Instagram
+            </a>
+            <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="social-card-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="footer-simple">
+  <div class="container">
+    <div class="footer-simple-inner">
+      <img src="images/logo-suburban-business-summit-dk.png" alt="Suburban Business Summit" class="footer-logo" />
+      <span class="footer-copy">Suburban Business Summit © 2026. All rights reserved</span>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res) {
+      if (res.ok) {
+        document.getElementById('formSuccess').classList.add('show');
+        document.getElementById('contactForm').reset();
+        btn.style.display = 'none';
+      } else {
+        document.getElementById('formError').classList.add('show');
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+      }
+    }).catch(function() {
+      document.getElementById('formError').classList.add('show');
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+    });
+  });
+</script>
+
+</body>
+</html>
