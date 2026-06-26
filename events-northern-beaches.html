@@ -226,8 +226,9 @@
 
     /* ── COUNTDOWN ──────────────────────────────────────── */
     .countdown-bar {
-      background: var(--amber);
+      background: #ffffff;
       padding: 20px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
     }
 
     .countdown-inner {
@@ -246,6 +247,8 @@
       color: var(--dark);
       margin-right: 8px;
     }
+
+    .countdown-sep { color: var(--dark); }
 
     .countdown-units {
       display: flex;
@@ -589,7 +592,7 @@
     @media (max-width: 720px) { .about-nb-inner { grid-template-columns: 1fr; gap: 36px; } }
     .about-nb-img img {
       width: 100%;
-      border-radius: var(--radius-lg);
+      border-radius: 15px;
       object-fit: cover;
       max-height: 460px;
     }
@@ -722,6 +725,10 @@
       background: var(--dark-2);
     }
 
+    .location > .container {
+      max-width: 1440px;
+    }
+
     .location-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -772,7 +779,7 @@
 
     .location-map {
       width: 100%;
-      aspect-ratio: 4/3;
+      min-height: 500px;
       border-radius: var(--radius-lg);
       overflow: hidden;
       background: var(--dark-3);
@@ -781,6 +788,7 @@
     .location-map iframe {
       width: 100%;
       height: 100%;
+      min-height: 500px;
       border: none;
     }
 
@@ -1002,17 +1010,15 @@
 
       <div class="speaker-card">
         <div class="speaker-photo-wrap">
-          <img src="images/speakers/crystal-petzer.jpg" alt="Crystal Petzer" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="speaker-initials" style="display:none">CP</div>
+          <img src="images/circ-krystal-petzer.png" alt="Krystal Petzer" class="speaker-photo" />
         </div>
-        <p class="speaker-name">Crystal Petzer</p>
+        <p class="speaker-name">Krystal Petzer</p>
         <p class="speaker-role">Tradie Success Stories — Hire a Hubby</p>
       </div>
 
       <div class="speaker-card">
         <div class="speaker-photo-wrap">
-          <img src="images/speakers/aaron-kemp.jpg" alt="Aaron Kemp" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="speaker-initials" style="display:none">AK</div>
+          <img src="images/circ-aaron-kemp.png" alt="Aaron Kemp" class="speaker-photo" />
         </div>
         <p class="speaker-name">Aaron Kemp</p>
         <p class="speaker-role">Trades For Trades Association — Making money in challenging environments</p>
@@ -1032,8 +1038,7 @@
       </div>
       <div class="speaker-card panel-speaker">
         <div class="speaker-photo-wrap">
-          <img src="images/speakers/kim-fernandez.jpg" alt="Kim Fernandez" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="speaker-initials" style="display:none">KF</div>
+          <img src="images/circ-AI Collab - Kim Fernandez.png" alt="Kim Fernandez" class="speaker-photo" />
         </div>
         <p class="speaker-name">Kim Fernandez</p>
         <p class="speaker-role">AI Collab</p>
@@ -1050,38 +1055,34 @@
 
       <div class="speaker-card">
         <div class="speaker-photo-wrap">
-          <img src="images/speakers/martin-vana.jpg" alt="Martin Vana" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="speaker-initials" style="display:none">MV</div>
+          <img src="images/circ-Darevolution-Phillip John.png" alt="Phillip John" class="speaker-photo" />
         </div>
-        <p class="speaker-name">Martin Vana</p>
-        <p class="speaker-role">Redefine Finance</p>
+        <p class="speaker-name">Phillip John</p>
+        <p class="speaker-role">Darevolution</p>
       </div>
 
       <div class="speaker-card">
         <div class="speaker-photo-wrap">
-          <img src="images/speakers/frank-burke.jpg" alt="Frank Burke" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="speaker-initials" style="display:none">FB</div>
+          <img src="images/circ-Flowganise-Raphael Gonzalez.png" alt="Raphael Gonzalez" class="speaker-photo" />
         </div>
-        <p class="speaker-name">Frank Burke</p>
-        <p class="speaker-role">Redefine Finalist</p>
+        <p class="speaker-name">Raphael Gonzalez</p>
+        <p class="speaker-role">Flowganise</p>
       </div>
 
       <div class="speaker-card">
         <div class="speaker-photo-wrap">
-          <img src="images/speakers/mhairi-holway.jpg" alt="Mhairi Holway" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="speaker-initials" style="display:none">MH</div>
+          <img src="images/circ-lisa-cohen.png" alt="Lisa Cohen" class="speaker-photo" />
         </div>
-        <p class="speaker-name">Mhairi Holway</p>
-        <p class="speaker-role">People Easy</p>
+        <p class="speaker-name">Lisa Cohen</p>
+        <p class="speaker-role"></p>
       </div>
 
       <div class="speaker-card">
         <div class="speaker-photo-wrap">
-          <img src="images/speakers/hayden-harvey.jpg" alt="Hayden Harvey" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="speaker-initials" style="display:none">HH</div>
+          <img src="images/circ-Spodtech-Preeti Dey.png" alt="Preeti Dey" class="speaker-photo" />
         </div>
-        <p class="speaker-name">Hayden Harvey</p>
-        <p class="speaker-role">Wise Allies</p>
+        <p class="speaker-name">Preeti Dey</p>
+        <p class="speaker-role">Spodtech</p>
       </div>
 
     </div>
@@ -1099,8 +1100,7 @@
 
       <div class="speaker-card">
         <div class="speaker-photo-wrap">
-          <img src="images/speakers/tracy-hall.jpg" alt="Tracy Hall" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="speaker-initials" style="display:none">TH</div>
+          <img src="images/circ-tracy-hall.png" alt="Tracy Hall" class="speaker-photo" />
         </div>
         <p class="speaker-name" style="color:#1a1a1a;">Tracy Hall</p>
         <p class="speaker-role" style="color:#444;"></p>
@@ -1108,8 +1108,7 @@
 
       <div class="speaker-card">
         <div class="speaker-photo-wrap">
-          <img src="images/speakers/anna-dengate.jpg" alt="Anna Dengate" class="speaker-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="speaker-initials" style="display:none">AD</div>
+          <img src="images/circ-anna-dengate.png" alt="Anna Dengate" class="speaker-photo" />
         </div>
         <p class="speaker-name" style="color:#1a1a1a;">Anna Dengate</p>
         <p class="speaker-role" style="color:#444;"></p>
@@ -1235,7 +1234,7 @@
     <div class="location-inner">
       <div class="location-map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.3956068437515!2d151.27194007655182!3d-33.706747973289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a11af3a3a6df%3A0x4082c05272e49d0!2sWarriewood%20Community%20Centre!5e0!3m2!1sen!2sau!4v1750900000000!5m2!1sen!2sau"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.9!2d151.2974874!3d-33.6973246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b0d5561ee960fd7%3A0xa4bac4d99bbb8897!2sWarriewood%20Community%20Centre!5e0!3m2!1sen!2sau!4v1750900000000!5m2!1sen!2sau"
           allowfullscreen
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
