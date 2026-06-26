@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hornsby — Friday 7 November 2025 | Suburban Business Summit</title>
+  <meta name="description" content="Suburban Business Summit Hornsby — Storey Park, Hornsby. Friday 7 November 2025. A full day for local business owners, professionals and community leaders." />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF5VT3P4T6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HF5VT3P4T6');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --amber: #F5A623;
+      --amber-dark: #D9891A;
+      --dark: #1C1C1C;
+      --dark-2: #242424;
+      --dark-3: #2E2E2E;
+      --white: #FFFFFF;
+      --off-white: #F0EDE8;
+      --text-muted: #A0A0A0;
+      --text-secondary: #CCCCCC;
+      --radius: 6px;
+      --radius-lg: 10px;
+      --max: 1140px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ── HEADER ─────────────────────────────────────────── */
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--dark);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .header-inner {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      height: 80px; gap: 20px;
+    }
+    .header-logo { display: flex; align-items: center; flex-shrink: 0; }
+    .header-logo img { height: 60px; width: auto; background: #fff; padding: 10px; border-radius: 4px; }
+    .header-right { display: flex; align-items: center; gap: 14px; }
+    .btn-phone {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--dark);
+      font-weight: 700; font-size: 14px;
+      padding: 10px 20px; border-radius: 40px;
+      white-space: nowrap; transition: background 0.2s;
+    }
+    .btn-phone:hover { background: var(--amber-dark); }
+    .social-icons { display: flex; align-items: center; gap: 8px; }
+    .social-icon {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+      border: 1.5px solid rgba(255,255,255,0.35); border-radius: 50%;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .social-icon:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    .social-icon svg { width: 16px; height: 16px; fill: var(--white); }
+    .hamburger {
+      display: flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px;
+      background: var(--amber); border-radius: 50%; border: none;
+      cursor: pointer; flex-shrink: 0;
+    }
+    .hamburger svg { width: 18px; height: 18px; }
+    .hamburger:hover { background: var(--amber-dark); }
+
+    .nav-drawer {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.85);
+    }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer-panel {
+      margin-left: auto; width: min(360px, 100%);
+      background: var(--dark-2); height: 100%;
+      padding: 32px 28px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .nav-drawer-close {
+      align-self: flex-end; background: none; border: none;
+      color: var(--white); font-size: 28px; cursor: pointer; margin-bottom: 16px;
+    }
+    .nav-drawer a {
+      display: block; font-size: 20px; font-weight: 700;
+      padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: var(--white);
+    }
+    .nav-drawer a:hover { color: var(--amber); }
+
+    /* ── HERO ───────────────────────────────────────────── */
+    .hero {
+      position: relative; min-height: 600px;
+      display: flex; align-items: center; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('../images/hero..jpg');
+      background-size: cover; background-position: center 5%;
+      filter: brightness(0.5);
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(28,28,28,0.92) 45%, rgba(28,28,28,0.2) 100%);
+    }
+    .hero > .container { width: 100%; }
+    .hero-content { position: relative; z-index: 2; padding: 80px 0; max-width: 640px; }
+    .hero-eyebrow {
+      font-size: 13px; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: clamp(30px, 5vw, 54px); font-weight: 900;
+      line-height: 1.08; letter-spacing: -0.02em; color: var(--white); margin-bottom: 20px;
+    }
+    .hero-meta { display: flex; flex-direction: column; gap: 6px; margin-bottom: 32px; }
+    .hero-meta-row {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 17px; font-weight: 600; color: var(--white);
+    }
+    .hero-meta-row svg { width: 18px; height: 18px; fill: var(--amber); flex-shrink: 0; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--amber); color: var(--dark);
+      font-weight: 800; font-size: 16px; padding: 17px 40px;
+      border-radius: var(--radius); letter-spacing: 0.04em; text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s; align-self: flex-start;
+    }
+    .btn-primary:hover { background: var(--amber-dark); transform: translateY(-1px); }
+
+    /* ── ABOUT ──────────────────────────────────────────── */
+    .about { background: var(--off-white); padding: 80px 0; color: var(--dark); }
+    .about-inner {
+      display: grid; grid-template-columns: 360px 1fr;
+      gap: 60px; align-items: start;
+    }
+    .about-flyer {
+      border-radius: var(--radius-lg);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+      overflow: hidden;
+    }
+    .about-flyer img { width: 100%; height: auto; display: block; }
+    .about-text h2 {
+      font-size: clamp(22px, 3vw, 32px); font-weight: 900;
+      letter-spacing: -0.02em; margin-bottom: 20px; color: var(--dark);
+    }
+    .about-text p {
+      font-size: 16px; color: #444; line-height: 1.8; margin-bottom: 14px;
+    }
+    .about-text p strong { color: var(--dark); }
+
+    /* ── THANK YOU ──────────────────────────────────────── */
+    .thankyou { background: var(--dark-2); padding: 72px 0; text-align: center; }
+    .thankyou h2 {
+      font-size: clamp(28px, 4vw, 44px); font-weight: 900;
+      color: var(--white); margin-bottom: 28px;
+    }
+    .thankyou-quote {
+      max-width: 680px; margin: 0 auto;
+      font-size: 17px; color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* ── PROGRAM ────────────────────────────────────────── */
+    .program { background: #c8914a; padding: 72px 0; }
+    .program-inner { max-width: 860px; margin: 0 auto; }
+    .program h2 {
+      font-size: clamp(22px, 3vw, 30px); font-weight: 900;
+      color: var(--dark); margin-bottom: 8px;
+    }
+    .program-subhead { font-size: 20px; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
+    .program-updated { font-size: 14px; font-style: italic; color: rgba(28,28,28,0.6); margin-bottom: 32px; }
+
+    .program-session-label {
+      font-size: 15px; font-weight: 900; color: var(--dark);
+      text-transform: uppercase; letter-spacing: 0.06em;
+      margin: 28px 0 16px; padding-bottom: 8px;
+      border-bottom: 2px solid rgba(28,28,28,0.2);
+    }
+    .program-session-label:first-child { margin-top: 0; }
+
+    .program-row {
+      display: flex; gap: 16px; margin-bottom: 12px; align-items: baseline;
+    }
+    .program-time-col {
+      font-size: 14px; font-weight: 800; color: var(--dark);
+      white-space: nowrap; flex-shrink: 0; min-width: 80px;
+    }
+    .program-desc {
+      font-size: 14px; color: var(--dark); line-height: 1.6;
+    }
+    .program-desc strong { font-weight: 800; }
+
+    /* ── CTA RIBBON ─────────────────────────────────────── */
+    .cta-ribbon {
+      position: relative; padding: 72px 0; overflow: hidden;
+    }
+    .cta-ribbon-bg {
+      position: absolute; inset: 0;
+      background-image: url('../images/gallery/networking.jpg');
+      background-size: cover; background-position: center;
+      filter: brightness(0.3);
+    }
+    .cta-ribbon-overlay { position: absolute; inset: 0; background: rgba(10,10,10,0.45); }
+    .cta-ribbon-content {
+      position: relative; z-index: 2;
+      max-width: 680px; margin: 0 auto; text-align: center;
+    }
+    .cta-ribbon-title {
+      font-size: clamp(24px, 4vw, 38px); font-weight: 900;
+      color: var(--white); letter-spacing: -0.01em; margin-bottom: 14px;
+    }
+    .cta-ribbon-sub {
+      font-size: 17px; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.65;
+    }
+    .cta-ribbon-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-cta-primary {
+      display: inline-flex; align-items: center;
+      background: var(--amber); color: var(--dark);
+      font-weight: 800; font-size: 15px; letter-spacing: 0.04em;
+      text-transform: uppercase; padding: 16px 36px;
+      border-radius: var(--radius); transition: background 0.2s;
+    }
+    .btn-cta-primary:hover { background: var(--amber-dark); }
+    .btn-cta-outline {
+      display: inline-flex; align-items: center;
+      border: 2px solid var(--white); color: var(--white);
+      font-weight: 700; font-size: 15px; padding: 14px 32px;
+      border-radius: var(--radius); transition: background 0.2s, color 0.2s;
+    }
+    .btn-cta-outline:hover { background: var(--white); color: var(--dark); }
+
+    /* ── FOOTER ─────────────────────────────────────────── */
+    .footer { background: var(--dark-2); border-top: 1px solid rgba(255,255,255,0.07); padding: 28px 0; }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .footer-logo { height: 36px; background: #fff; padding: 5px 8px; border-radius: 4px; }
+    .footer-copy { font-size: 13px; color: var(--text-muted); }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social {
+      width: 32px; height: 32px; background: rgba(255,255,255,0.08);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    }
+    .footer-social svg { width: 15px; height: 15px; fill: var(--white); }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .about-inner { grid-template-columns: 1fr; }
+      .about-flyer { max-width: 380px; margin: 0 auto; }
+    }
+    @media (max-width: 600px) {
+      .btn-phone span { display: none; }
+      .social-icons { display: none; }
+      .hero-content { padding: 60px 0; }
+      .footer-inner { justify-content: center; text-align: center; }
+      .cta-ribbon-btns { flex-direction: column; align-items: center; }
+      .program-row { flex-direction: column; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ────────────────────────────────────────────── -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="header-logo">
+        <img src="../images/logo.png" alt="Suburban Business Summit" />
+      </a>
+      <div class="header-right">
+        <a href="tel:0451248292" class="btn-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          <span>Call Us On 0451 248 292</span>
+        </a>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <button class="hamburger" onclick="document.getElementById('navDrawer').classList.toggle('open')" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--dark)" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-drawer" id="navDrawer" onclick="this.classList.remove('open')">
+  <div class="nav-drawer-panel" onclick="event.stopPropagation()">
+    <button class="nav-drawer-close" onclick="document.getElementById('navDrawer').classList.remove('open')">&times;</button>
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="northern-beaches.html">Northern Beaches — June 2026</a>
+    <a href="central-coast.html">Central Coast — March 2026</a>
+    <a href="hornsby.html">Hornsby — November 2025</a>
+    <a href="illawarra.html">Illawarra — September 2026</a>
+    <a href="../sponsorship-partnership-packages.html">Sponsorship &amp; Packages</a>
+    <a href="../booking-form.html">Sponsor &amp; Exhibition Booking</a>
+    <a href="../gallery.html">Gallery</a>
+    <a href="../contact.html">Contact Us</a>
+    <a href="tel:0451248292" style="color: var(--amber); margin-top: 16px;">Call 0451 248 292</a>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Past Event</p>
+      <h1 class="hero-title">Suburban Business Summit — Hornsby</h1>
+      <div class="hero-meta">
+        <div class="hero-meta-row">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Storey Park, Hornsby
+        </div>
+        <div class="hero-meta-row">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5C3.89 4 3 4.9 3 6v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+          Friday, November 7th, 2025 &nbsp;·&nbsp; 9AM – 6PM
+        </div>
+      </div>
+      <a href="../contact.html" class="btn-primary">Register for Future Events</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ─────────────────────────────────────────────── -->
+<section class="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-flyer">
+        <img src="../images/ban-honsby.jpg" alt="Suburban Business Summit Hornsby 2025 Event Flyer" />
+      </div>
+      <div class="about-text">
+        <h2>About Suburban Business Summit — Hornsby</h2>
+        <p>Join us at the Suburban Business Summit — Hornsby and connect with local business owners and leaders from trade, charities, finance, food manufacturing, council, auto trades, schools, health practitioners, and venue managers who understand the challenges you face.</p>
+        <p>You'll gain practical ideas and strategies you can use right away to help your business grow and succeed.</p>
+        <p>Meet <strong>100+</strong> like-minded professionals and industry experts, and build meaningful connections that open doors to new opportunities.</p>
+        <p>Learn from <strong>28+</strong> experienced speakers who share real-world insights tailored to our community's unique business landscape.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THANK YOU ──────────────────────────────────────────── -->
+<section class="thankyou">
+  <div class="container">
+    <h2>Thank You</h2>
+    <p class="thankyou-quote">Julian Leeser, Liberal Federal Member for Berowra, shared a community-focused, heartfelt message of support for the Suburban Business Summit — thanking organiser Luke Griffin, and reinforcing a commitment to help small businesses in Hornsby cut red tape, access more local business spaces, and create a thriving live-and-work community.</p>
+  </div>
+</section>
+
+<!-- ── PROGRAM ────────────────────────────────────────────── -->
+<section class="program">
+  <div class="container">
+    <div class="program-inner">
+      <h2>Suburban Business Summit</h2>
+      <p class="program-subhead">2025 Event Program</p>
+      <p class="program-updated">Updated: 03/11/25 2:50pm</p>
+
+      <p class="program-session-label">Morning Sessions</p>
+
+      <div class="program-row">
+        <span class="program-time-col">9:20 am</span>
+        <span class="program-desc">Welcome Address — <strong>Nathan Tilbury</strong>, Local Councillor</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">9:30 am</span>
+        <span class="program-desc">Entrepreneur <strong>Tibo Roumagoux</strong> — The Startup Journey</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">9:50 am</span>
+        <span class="program-desc"><strong>Isuru Da Silva</strong> — Panel — Chasing Clicks Beyond Our Reach</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">10:20 am</span>
+        <span class="program-desc"><strong>Tim Mitchell</strong> — Inspirational Speaker — Cookieman &amp; Local Business Success</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">10:40 am</span>
+        <span class="program-desc">Networking Morning Tea Break with Cookieman</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">11:10 am</span>
+        <span class="program-desc"><strong>Stephen Holland</strong> — Panel — Challenges of Employment for Local Trades</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">11:40 am</span>
+        <span class="program-desc"><strong>Karen Sander</strong> — Inspirational Speaker — Stories That Build Business</span>
+      </div>
+
+      <p class="program-session-label">Afternoon Sessions</p>
+
+      <div class="program-row">
+        <span class="program-time-col">12:00 pm</span>
+        <span class="program-desc"><strong>Alexandra Quinn</strong> — Panel — Navigating Business Growth When AI Rewrites the Rules</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">12:30 pm</span>
+        <span class="program-desc">Independent for Hornsby — <strong>Nathan Tilbury</strong> — Small Business &amp; Council Collaborativeness</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">1:00 pm</span>
+        <span class="program-desc">Networking Lunch with White Olive &amp; COHO</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">2:00 pm</span>
+        <span class="program-desc"><strong>Jo Nipperess</strong> — Panel — Health and Community Over Jobs and Growth</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">2:30 pm</span>
+        <span class="program-desc"><strong>Ivan Ang</strong> — Inspirational Speaker — Planning for the Future</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">3:10 pm</span>
+        <span class="program-desc"><strong>Sean Collins</strong> — Panel — How Can Businesses Better Engage Their Community</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">3:40 pm</span>
+        <span class="program-desc">Wrap-Up the Day</span>
+      </div>
+
+      <p class="program-session-label">Evening Activities</p>
+
+      <div class="program-row">
+        <span class="program-time-col"></span>
+        <span class="program-desc">Sponsored by <strong>LinkedIn Local North Shore</strong> from 4:30pm @ The Asquith Club</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">4:30 pm</span>
+        <span class="program-desc">Local Business Networking featuring <strong>Paris Major</strong> (National YOYO Champion)</span>
+      </div>
+      <div class="program-row">
+        <span class="program-time-col">6:00 pm</span>
+        <span class="program-desc">Networking continued with Barefoot Bowls — Families Welcome</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA RIBBON ─────────────────────────────────────────── -->
+<section class="cta-ribbon">
+  <div class="cta-ribbon-bg"></div>
+  <div class="cta-ribbon-overlay"></div>
+  <div class="container">
+    <div class="cta-ribbon-content">
+      <h2 class="cta-ribbon-title">Join Us at the Next Suburban Business Summit</h2>
+      <p class="cta-ribbon-sub">Events like this are happening across Australia. Register your interest to be first to know about upcoming Summits near you.</p>
+      <div class="cta-ribbon-btns">
+        <a href="../contact.html" class="btn-cta-primary">Register Your Interest</a>
+        <a href="northern-beaches.html" class="btn-cta-outline">See Upcoming Events</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <img src="../images/logo.png" alt="Suburban Business Summit" class="footer-logo" />
+      <span class="footer-copy">Suburban Business Summit © 2026. All rights reserved</span>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/suburban-business-summit" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
