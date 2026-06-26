@@ -69,7 +69,8 @@
       --off-white: #F0EDE8;
       --text-muted: #A0A0A0;
       --text-secondary: #CCCCCC;
-      --green: #4A7C59;
+      --green: #68925B;
+      --brown: #A26C44;
       --radius: 6px;
       --radius-lg: 10px;
       --max: 1440px;
@@ -498,7 +499,7 @@
       font-weight: 800;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--amber);
+      color: var(--green);
       margin-bottom: 10px;
     }
 
@@ -960,7 +961,7 @@
     .site-footer { background: #111; border-top: 1px solid rgba(255,255,255,0.08); padding: 56px 0 0; }
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .footer-brand-logo { height: 52px; margin-bottom: 16px; }
-    .footer-tagline { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; max-width: 270px; }
+    .footer-tagline { font-size: 13px; color: var(--brown); line-height: 1.7; margin-bottom: 20px; max-width: 270px; }
     .footer-socials { display: flex; gap: 10px; }
     .footer-social-icon { width: 34px; height: 34px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
     .footer-social-icon:hover { background: rgba(255,255,255,0.18); }
@@ -1241,34 +1242,34 @@
       <h2 class="section-title">Charity Panel</h2>
       <p class="section-sub">Proudly supporting three local charities making a real difference in our community.</p>
     </div>
-    <div style="display:flex;gap:40px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:40px;">
+    <div style="display:flex;gap:32px;justify-content:center;align-items:flex-start;flex-wrap:wrap;margin-top:40px;">
 
-      <div style="text-align:center;">
-        <div style="width:180px;height:120px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="../images/charity-mowana.png" alt="Mowana — Your Local Safe Space" style="max-width:140px;max-height:90px;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
-          <span style="display:none;color:rgba(255,255,255,0.4);font-size:13px;padding:10px;">Mowana</span>
+      <a href="https://mowana.org.au/" target="_blank" rel="noopener" style="text-align:center;text-decoration:none;color:inherit;max-width:200px;">
+        <div style="width:180px;height:120px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(104,146,91,0.6)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)'">
+          <img src="../images/charity-mowana.png" alt="Mowana — Your Local Safe Space" style="max-width:140px;max-height:90px;object-fit:contain;" />
         </div>
         <p style="font-weight:700;font-size:15px;margin:0 0 4px;">Mowana</p>
-        <p style="font-size:13px;color:var(--text-secondary);margin:0;">Your Local Safe Space</p>
-      </div>
+        <p style="font-size:13px;color:var(--text-secondary);margin:0 0 8px;">Your Local Safe Space</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;margin:0;">A community-based mental health and wellbeing hub offering free, safe support for those who need it most.</p>
+      </a>
 
-      <div style="text-align:center;">
-        <div style="width:180px;height:120px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="../images/charity-mongrels-men.png" alt="Mongrels Men" style="max-width:140px;max-height:90px;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
-          <span style="display:none;color:rgba(255,255,255,0.4);font-size:13px;padding:10px;">Mongrels Men</span>
+      <a href="https://mongrelsmen.com/" target="_blank" rel="noopener" style="text-align:center;text-decoration:none;color:inherit;max-width:200px;">
+        <div style="width:180px;height:120px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(104,146,91,0.6)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)'">
+          <img src="../images/charity-mongrels-men.png" alt="Mongrels Men" style="max-width:140px;max-height:90px;object-fit:contain;" />
         </div>
         <p style="font-weight:700;font-size:15px;margin:0 0 4px;">Mongrels Men</p>
-        <p style="font-size:13px;color:var(--text-secondary);margin:0;">&nbsp;</p>
-      </div>
+        <p style="font-size:13px;color:var(--text-secondary);margin:0 0 8px;">Brotherhood. Connection. Action.</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;margin:0;">Building real connection between men through community, service and a bit of honest mateship.</p>
+      </a>
 
-      <div style="text-align:center;">
-        <div style="width:180px;height:120px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="../images/charity-for-love-of-dogs.png" alt="For Love of Dogs Academy" style="max-width:140px;max-height:90px;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
-          <span style="display:none;color:rgba(255,255,255,0.4);font-size:13px;padding:10px;">For Love of Dogs Academy</span>
+      <a href="https://www.loveofdogs.org.au/" target="_blank" rel="noopener" style="text-align:center;text-decoration:none;color:inherit;max-width:200px;">
+        <div style="width:180px;height:120px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(104,146,91,0.6)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)'">
+          <img src="../images/charity-for-love-of-dogs.png" alt="For Love of Dogs Academy" style="max-width:140px;max-height:90px;object-fit:contain;" />
         </div>
         <p style="font-weight:700;font-size:15px;margin:0 0 4px;">For Love of Dogs Academy</p>
-        <p style="font-size:13px;color:var(--text-secondary);margin:0;">&nbsp;</p>
-      </div>
+        <p style="font-size:13px;color:var(--text-secondary);margin:0 0 8px;">Rescue. Train. Transform.</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;margin:0;">Rescuing and training dogs to change lives — matching animals in need with families who care.</p>
+      </a>
 
     </div>
   </div>
