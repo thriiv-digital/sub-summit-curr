@@ -139,7 +139,7 @@
     /* ── HERO ───────────────────────────────────────────── */
     .hero {
       position: relative;
-      min-height: 52vh;
+      min-height: 72vh;
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -610,15 +610,15 @@
     @media (max-width: 560px) { .footer-top { grid-template-columns: 1fr; } .footer-bottom { justify-content: center; text-align: center; } }
 
     /* ── DUAL COUNTDOWN ──────────────────────────────────── */
-    .dual-countdown { background: var(--dark-2); padding: 56px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .dual-countdown { background: var(--dark-2); padding: 32px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .dual-countdown-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .event-card { background: var(--dark-3); border-radius: 12px; padding: 36px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+    .event-card { background: var(--dark-3); border-radius: 12px; padding: 36px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
     .event-card-nb { border-top: 4px solid var(--amber); }
     .event-card-il { border-top: 4px solid rgba(255,255,255,0.2); }
     .event-card-badge { font-size: 11px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber); }
     .event-card-il .event-card-badge { color: var(--text-muted); }
-    .event-card-title { font-size: clamp(20px, 2.5vw, 28px); font-weight: 900; letter-spacing: -0.02em; }
-    .event-card-date { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+    .event-card-title { font-size: clamp(18px, 2vw, 24px); font-weight: 900; letter-spacing: -0.02em; }
+    .event-card-date { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
     .countdown-units { display: flex; align-items: center; gap: 8px; }
     .countdown-unit { background: var(--dark); border-radius: 8px; padding: 16px 20px; width: 82px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; }
     .countdown-num { font-size: 42px; font-weight: 900; color: var(--amber); line-height: 1; }
@@ -642,6 +642,15 @@
     .event-card-btns { display: flex; gap: 10px; width: 100%; }
     .event-card-btn-info { display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: var(--white); font-weight: 700; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; padding: 14px 20px; border-radius: var(--radius); transition: background 0.2s; white-space: nowrap; }
     .event-card-btn-info:hover { background: rgba(255,255,255,0.15); }
+    /* ── HOMEPAGE TRANSPARENT HEADER ─────────────── */
+    .header {
+      background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%) !important;
+      border-bottom: none !important;
+    }
+    .header.compact {
+      background: var(--dark) !important;
+      border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+    }
   </style>
 </head>
 <body>
@@ -718,7 +727,7 @@
       <div class="event-card event-card-nb">
         <p class="event-card-badge">Next Event</p>
         <h3 class="event-card-title">Northern Beaches</h3>
-        <p class="event-card-date">Tuesday 30 June 2026<br>Warriewood Community Centre</p>
+        <p class="event-card-date">Tuesday 30 June 2026 &bull; Warriewood Community Centre</p>
         <div class="countdown-units">
           <div class="countdown-unit"><span class="countdown-num" id="nb-d">--</span><span class="countdown-lbl">Days</span></div>
           <span class="countdown-sep">:</span>
@@ -734,7 +743,7 @@
       <div class="event-card event-card-il">
         <p class="event-card-badge">Coming Soon</p>
         <h3 class="event-card-title">Illawarra</h3>
-        <p class="event-card-date">Thursday 17 September 2026<br>Dapto Ribbonwood Centre</p>
+        <p class="event-card-date">Thursday 17 September 2026 &bull; Dapto Ribbonwood Centre</p>
         <div class="countdown-units">
           <div class="countdown-unit"><span class="countdown-num" id="il-d">--</span><span class="countdown-lbl">Days</span></div>
           <span class="countdown-sep">:</span>
