@@ -75,6 +75,9 @@
     .header-logo img {
       height: 60px;
       width: auto;
+      background: #fff;
+      padding: 10px;
+      border-radius: 4px;
     }
 
     .header-right {
@@ -145,7 +148,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1400&auto=format&fit=crop&q=80');
+      background-image: url('images/hero.png');
       background-size: cover;
       background-position: center top;
       filter: brightness(0.45);
@@ -259,6 +262,75 @@
       transition: background 0.2s;
     }
     .btn-solid:hover { background: var(--amber-dark); }
+
+    /* ── BOOK TICKETS ───────────────────────────────────── */
+    .book-tickets {
+      position: relative;
+      padding: 80px 0;
+      overflow: hidden;
+    }
+
+    .book-tickets-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/baker-street.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+    }
+
+    .book-tickets-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(28,28,28,0.6);
+    }
+
+    .book-tickets-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .book-tickets-title {
+      font-size: clamp(28px, 4.5vw, 48px);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.03em;
+      margin-bottom: 32px;
+    }
+
+    .book-tickets-list {
+      list-style: disc;
+      text-align: left;
+      display: inline-block;
+      margin: 0 auto 36px;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .book-tickets-list li {
+      font-size: 16px;
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    .btn-book {
+      display: inline-flex;
+      align-items: center;
+      background: var(--amber);
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px 40px;
+      border-radius: 6px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-book:hover { background: var(--amber-dark); transform: translateY(-1px); }
 
     /* ── ABOUT ──────────────────────────────────────────── */
     .about {
@@ -579,6 +651,25 @@
       </a>
       <a href="tel:0451248292" class="btn-outline">
         Call Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── BOOK TICKETS ──────────────────────────────────────────── -->
+<section class="book-tickets" id="book-tickets">
+  <div class="book-tickets-bg"></div>
+  <div class="book-tickets-overlay"></div>
+  <div class="container">
+    <div class="book-tickets-content">
+      <h2 class="book-tickets-title">Book Tickets for 30th June</h2>
+      <ul class="book-tickets-list">
+        <li>Hear real stories and practical insights from local leaders, innovators, and partners like Redefine Finance, Service NSW, Charity Collaboration, and Fair Play Entertainment.</li>
+        <li>Get warm introductions to charities, trades, community leaders, and ecosystem partners who actively back local business.</li>
+        <li>Put your business in front of local decision-makers and potential customers in one place, alongside trusted supporters such as Redefine Finance, Service NSW, Charity Collaboration, and Fair Play Entertainment.</li>
+      </ul>
+      <a href="https://events.humanitix.com/suburban-business-summit-northern-beaches/tickets" target="_blank" rel="noopener noreferrer" class="btn-book">
+        Exhibition Booking Form
       </a>
     </div>
   </div>
