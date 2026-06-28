@@ -225,7 +225,7 @@
     /* ── HERO ───────────────────────────────────────────── */
     .hero {
       position: relative;
-      min-height: 78vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -320,6 +320,11 @@
       background: #ffffff;
       padding: 20px 0;
       border-bottom: 1px solid rgba(0,0,0,0.08);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
     }
 
     .countdown-inner {
@@ -1108,10 +1113,9 @@
       </div>
     </div>
   </div>
-</section>
 
-<!-- ── COUNTDOWN ─────────────────────────────────────────────── -->
-<div class="countdown-bar">
+  <!-- ── COUNTDOWN ─────────────────────────────────────────────── -->
+  <div class="countdown-bar">
   <div class="container">
     <div class="countdown-inner">
       <span class="countdown-label">Event starts in</span>
@@ -1146,7 +1150,7 @@
     setInterval(tick, 1000);
   })();
 </script>
-
+</section>
 
 <!-- ── BOOK TICKETS NOW ───────────────────────────────────── -->
 <section class="book-now" id="book">
