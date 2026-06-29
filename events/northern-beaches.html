@@ -1132,9 +1132,17 @@
 <script>
   (function() {
     var target = new Date("2026-06-30T08:00:00+10:00").getTime();
+    var expiry = new Date("2026-07-01T00:00:00+10:00").getTime();
+    var bar    = document.querySelector(".countdown-bar");
+    var units  = document.querySelector(".countdown-units");
     function tick() {
-      var now = Date.now(), diff = target - now;
-      if (diff <= 0) { document.querySelector(".countdown-bar").style.display = "none"; return; }
+      var now = Date.now();
+      if (now >= expiry) { bar.style.display = "none"; return; }
+      if (now >= target) {
+        units.innerHTML = '<p style="font-size:20px;font-weight:800;color:var(--dark);margin:8px 0;">Event on today!</p>';
+        return;
+      }
+      var diff = target - now;
       var d = Math.floor(diff / 86400000);
       var h = Math.floor((diff % 86400000) / 3600000);
       var m = Math.floor((diff % 3600000) / 60000);

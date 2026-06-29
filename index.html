@@ -834,19 +834,38 @@
 <script>
 (function(){
   function pad(n){ return String(n).padStart(2,'0'); }
-  function tick(targetISO, ids){
-    var diff = new Date(targetISO) - new Date();
-    if(diff <= 0){ ids.forEach(function(id){ document.getElementById(id).textContent='00'; }); return; }
+  var nbTarget  = new Date('2026-06-30T08:00:00+10:00').getTime();
+  var nbExpiry  = new Date('2026-07-01T00:00:00+10:00').getTime();
+
+  function updateNB(){
+    var now = Date.now();
+    var nbCard = document.querySelector('.event-card-nb');
+    var units  = nbCard.querySelector('.countdown-units');
+    if(now >= nbExpiry){
+      nbCard.style.display = 'none'; return;
+    }
+    if(now >= nbTarget){
+      units.innerHTML = '<p style="font-size:20px;font-weight:800;color:var(--amber);margin:8px 0;">Event on today!</p>'; return;
+    }
+    var diff = nbTarget - now;
     var d=Math.floor(diff/864e5), h=Math.floor((diff%864e5)/36e5), m=Math.floor((diff%36e5)/6e4), s=Math.floor((diff%6e4)/1e3);
-    document.getElementById(ids[0]).textContent=d;
-    document.getElementById(ids[1]).textContent=pad(h);
-    document.getElementById(ids[2]).textContent=pad(m);
-    document.getElementById(ids[3]).textContent=pad(s);
+    document.getElementById('nb-d').textContent=d;
+    document.getElementById('nb-h').textContent=pad(h);
+    document.getElementById('nb-m').textContent=pad(m);
+    document.getElementById('nb-s').textContent=pad(s);
   }
-  function update(){
-    tick('2026-06-30T08:00:00+10:00',['nb-d','nb-h','nb-m','nb-s']);
-    tick('2026-09-17T08:00:00+10:00',['il-d','il-h','il-m','il-s']);
+
+  function updateIL(){
+    var diff = new Date('2026-09-17T08:00:00+10:00') - new Date();
+    if(diff <= 0){ ['il-d','il-h','il-m','il-s'].forEach(function(id){ document.getElementById(id).textContent='00'; }); return; }
+    var d=Math.floor(diff/864e5), h=Math.floor((diff%864e5)/36e5), m=Math.floor((diff%36e5)/6e4), s=Math.floor((diff%6e4)/1e3);
+    document.getElementById('il-d').textContent=d;
+    document.getElementById('il-h').textContent=pad(h);
+    document.getElementById('il-m').textContent=pad(m);
+    document.getElementById('il-s').textContent=pad(s);
   }
+
+  function update(){ updateNB(); updateIL(); }
   update(); setInterval(update,1000);
 })();
 </script>
