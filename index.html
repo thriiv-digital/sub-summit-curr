@@ -176,8 +176,8 @@
     }
     .hamburger svg { width: 18px; height: 18px; }
     .hamburger:hover { background: var(--amber-dark); }
-    .header.compact .header-inner { height: 80px; }
-    .header.compact .header-logo img { height: 48px; }
+    .header.compact .header-inner { height: 93px; }
+    .header.compact .header-logo img { height: 53px; }
 
     /* ── HERO ───────────────────────────────────────────── */
     .hero {
@@ -697,6 +697,9 @@
     .event-card-btn-info:hover { background: rgba(255,255,255,0.15); }
     /* ── HOMEPAGE TRANSPARENT HEADER ─────────────── */
     .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
       background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%) !important;
       border-bottom: none !important;
     }
