@@ -663,7 +663,8 @@
 
     /* ── DUAL COUNTDOWN ──────────────────────────────────── */
     .dual-countdown { background: var(--dark-2); padding: 32px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .dual-countdown-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .dual-countdown-inner { display: flex; justify-content: center; gap: 24px; }
+    .dual-countdown-inner .event-card { max-width: 480px; width: 100%; }
     .event-card { background: var(--dark-3); border-radius: 12px; padding: 36px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
     .event-card-nb { border-top: 4px solid var(--amber); }
     .event-card-il { border-top: 4px solid rgba(255,255,255,0.2); }
