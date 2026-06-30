@@ -293,6 +293,15 @@
 
     .hero-cta { display: flex; flex-direction: column; gap: 12px; }
 
+    .hero-cta .btn-primary,
+    .hero-cta .btn-outline {
+      width: 420px;
+      max-width: 100%;
+      height: 56px;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -419,12 +428,15 @@
     .btn-outline {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       border: 1.5px solid rgba(255,255,255,0.3);
       color: var(--white);
-      font-weight: 600;
+      font-weight: 800;
       font-size: 14px;
       padding: 11px 24px;
       border-radius: var(--radius);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
       transition: border-color 0.2s, background 0.2s;
     }
     .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
@@ -1100,8 +1112,8 @@
         </div>
       </div>
       <div class="hero-cta">
-        <span class="btn-primary" style="cursor:default;opacity:0.9;">Earlybird Tickets Available Soon</span>
-        <a href="../sponsorship-partnership-packages.html" class="btn-outline">Partner, Speak &amp; Exhibit — Get Involved</a>
+        <a href="../sponsorship-partnership-packages.html" class="btn-primary">Partner, Speak &amp; Exhibit</a>
+        <span class="btn-outline" style="cursor:default;opacity:0.9;">Earlybird Tickets Available Soon</span>
       </div>
     </div>
   </div>
