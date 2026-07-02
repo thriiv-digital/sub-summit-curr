@@ -1123,61 +1123,79 @@
       <h2 class="section-title" style="color:var(--white);">Sub Summit Northern Beaches<br><span style="font-size:0.65em;font-weight:600;color:rgba(255,255,255,0.75);">June 30, 2026</span></h2>
     </div>
     <div class="nb-masonry">
-      <a href="../images/gallery/northern-beaches/20260630SUB-70-speakers.jpg" class="nb-photo-item" target="_blank" data-label="Speakers">
+      <div class="nb-photo-item" onclick="nbOpenLightbox(0)">
         <img src="../images/gallery/northern-beaches/20260630SUB-70-speakers.jpg" alt="Speakers" loading="lazy">
         <span class="nb-photo-label">Speakers</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-83-speakers.jpg" class="nb-photo-item" target="_blank" data-label="Speakers">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(1)">
         <img src="../images/gallery/northern-beaches/20260630SUB-83-speakers.jpg" alt="Speakers" loading="lazy">
         <span class="nb-photo-label">Speakers</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-86-speakers.jpg" class="nb-photo-item" target="_blank" data-label="Speakers">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(2)">
         <img src="../images/gallery/northern-beaches/20260630SUB-86-speakers.jpg" alt="Speakers" loading="lazy">
         <span class="nb-photo-label">Speakers</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-1-expo.jpg" class="nb-photo-item" target="_blank" data-label="Expo">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(3)">
         <img src="../images/gallery/northern-beaches/20260630SUB-1-expo.jpg" alt="Expo" loading="lazy">
         <span class="nb-photo-label">Expo</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-2-speakers.png" class="nb-photo-item" target="_blank" data-label="Speakers">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(4)">
         <img src="../images/gallery/northern-beaches/20260630SUB-2-speakers.png" alt="Speakers" loading="lazy">
         <span class="nb-photo-label">Speakers</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-3-speakers.png" class="nb-photo-item" target="_blank" data-label="Speakers">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(5)">
         <img src="../images/gallery/northern-beaches/20260630SUB-3-speakers.png" alt="Speakers" loading="lazy">
         <span class="nb-photo-label">Speakers</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-4-expo.png" class="nb-photo-item" target="_blank" data-label="Expo">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(6)">
         <img src="../images/gallery/northern-beaches/20260630SUB-4-expo.png" alt="Expo" loading="lazy">
         <span class="nb-photo-label">Expo</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-5-speakers.png" class="nb-photo-item" target="_blank" data-label="Speakers">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(7)">
         <img src="../images/gallery/northern-beaches/20260630SUB-5-speakers.png" alt="Speakers" loading="lazy">
         <span class="nb-photo-label">Speakers</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-7-speakers.jpg" class="nb-photo-item" target="_blank" data-label="Speakers">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(8)">
         <img src="../images/gallery/northern-beaches/20260630SUB-7-speakers.jpg" alt="Speakers" loading="lazy">
         <span class="nb-photo-label">Speakers</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-8-entertainment.jpg" class="nb-photo-item" target="_blank" data-label="Entertainment">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(9)">
         <img src="../images/gallery/northern-beaches/20260630SUB-8-entertainment.jpg" alt="Entertainment" loading="lazy">
         <span class="nb-photo-label">Entertainment</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-23-charity.jpg" class="nb-photo-item" target="_blank" data-label="Charity">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(10)">
         <img src="../images/gallery/northern-beaches/20260630SUB-23-charity.jpg" alt="Charity" loading="lazy">
         <span class="nb-photo-label">Charity</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-24.jpg" class="nb-photo-item" target="_blank" data-label="On The Day">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(11)">
         <img src="../images/gallery/northern-beaches/20260630SUB-24.jpg" alt="On The Day" loading="lazy">
         <span class="nb-photo-label">On The Day</span>
-      </a>
-      <a href="../images/gallery/northern-beaches/20260630SUB-25-expo.jpg" class="nb-photo-item" target="_blank" data-label="Expo">
+      </div>
+      <div class="nb-photo-item" onclick="nbOpenLightbox(12)">
         <img src="../images/gallery/northern-beaches/20260630SUB-25-expo.jpg" alt="Expo" loading="lazy">
         <span class="nb-photo-label">Expo</span>
-      </a>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- ── NB LIGHTBOX ────────────────────────────────────────── -->
+<div class="nb-lightbox" id="nbLightbox" onclick="nbCloseLightbox()">
+  <button class="nb-lb-close" onclick="nbCloseLightbox()" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="nb-lb-prev" onclick="event.stopPropagation(); nbNavigate(-1)" aria-label="Previous">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <div class="nb-lb-inner" onclick="event.stopPropagation()">
+    <img class="nb-lb-img" id="nbLbImg" src="" alt="" />
+    <p class="nb-lb-caption" id="nbLbCaption"></p>
+    <p class="nb-lb-counter" id="nbLbCounter"></p>
+  </div>
+  <button class="nb-lb-next" onclick="event.stopPropagation(); nbNavigate(1)" aria-label="Next">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>
 
 <style>
 .nb-gallery { padding: 72px 0 56px; background: var(--green); }
@@ -1206,27 +1224,108 @@
   transition: transform 0.35s ease;
   border-radius: 10px;
 }
-.nb-photo-item:hover img {
-  transform: scale(1.06);
-}
+.nb-photo-item:hover img { transform: scale(1.06); }
 .nb-photo-label {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   background: linear-gradient(to top, rgba(28,28,28,0.72) 0%, transparent 100%);
   color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
   padding: 28px 14px 12px;
-  opacity: 0;
-  transition: opacity 0.25s ease;
+  opacity: 0; transition: opacity 0.25s ease;
   border-radius: 0 0 10px 10px;
 }
-.nb-photo-item:hover .nb-photo-label {
-  opacity: 1;
+.nb-photo-item:hover .nb-photo-label { opacity: 1; }
+
+/* Lightbox */
+.nb-lightbox {
+  display: none; position: fixed; inset: 0; z-index: 600;
+  background: rgba(0,0,0,0.95);
+  align-items: center; justify-content: center; padding: 24px;
+  cursor: zoom-out;
 }
+.nb-lightbox.open { display: flex; }
+.nb-lb-inner {
+  position: relative; max-width: min(1100px,100%);
+  max-height: calc(100vh - 100px);
+  display: flex; flex-direction: column; align-items: center;
+  cursor: default;
+}
+.nb-lb-img {
+  max-width: 100%; max-height: calc(100vh - 140px);
+  object-fit: contain; border-radius: 10px; display: block;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.8);
+}
+.nb-lb-caption {
+  margin-top: 16px; font-size: 14px; font-weight: 700;
+  color: #ccc; letter-spacing: 0.04em; text-transform: uppercase; text-align: center;
+}
+.nb-lb-counter { margin-top: 6px; font-size: 12px; color: #888; text-align: center; }
+.nb-lb-close {
+  position: fixed; top: 20px; right: 24px;
+  background: rgba(255,255,255,0.1); border: none; border-radius: 50%;
+  width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: #fff; backdrop-filter: blur(6px);
+}
+.nb-lb-close:hover { background: rgba(255,255,255,0.2); }
+.nb-lb-close svg { width: 20px; height: 20px; }
+.nb-lb-prev, .nb-lb-next {
+  position: fixed; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.1); border: none; border-radius: 50%;
+  width: 52px; height: 52px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: #fff; backdrop-filter: blur(6px);
+}
+.nb-lb-prev:hover, .nb-lb-next:hover { background: rgba(245,166,35,0.5); }
+.nb-lb-prev svg, .nb-lb-next svg { width: 22px; height: 22px; }
+.nb-lb-prev { left: 16px; }
+.nb-lb-next { right: 16px; }
 </style>
+
+<script>
+var nbImages = [
+  { src: '../images/gallery/northern-beaches/20260630SUB-70-speakers.jpg',    caption: 'Speakers' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-83-speakers.jpg',    caption: 'Speakers' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-86-speakers.jpg',    caption: 'Speakers' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-1-expo.jpg',         caption: 'Expo' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-2-speakers.png',     caption: 'Speakers' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-3-speakers.png',     caption: 'Speakers' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-4-expo.png',         caption: 'Expo' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-5-speakers.png',     caption: 'Speakers' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-7-speakers.jpg',     caption: 'Speakers' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-8-entertainment.jpg',caption: 'Entertainment' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-23-charity.jpg',     caption: 'Charity' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-24.jpg',             caption: 'On The Day' },
+  { src: '../images/gallery/northern-beaches/20260630SUB-25-expo.jpg',        caption: 'Expo' },
+];
+var nbCurrent = 0;
+function nbOpenLightbox(i) {
+  nbCurrent = i; nbShowImage();
+  document.getElementById('nbLightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function nbCloseLightbox() {
+  document.getElementById('nbLightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function nbShowImage() {
+  var img = nbImages[nbCurrent];
+  document.getElementById('nbLbImg').src = img.src;
+  document.getElementById('nbLbImg').alt = img.caption;
+  document.getElementById('nbLbCaption').textContent = img.caption;
+  document.getElementById('nbLbCounter').textContent = (nbCurrent + 1) + ' / ' + nbImages.length;
+}
+function nbNavigate(dir) {
+  nbCurrent = (nbCurrent + dir + nbImages.length) % nbImages.length;
+  nbShowImage();
+}
+document.addEventListener('keydown', function(e) {
+  if (!document.getElementById('nbLightbox').classList.contains('open')) return;
+  if (e.key === 'ArrowLeft')  nbNavigate(-1);
+  if (e.key === 'ArrowRight') nbNavigate(1);
+  if (e.key === 'Escape')     nbCloseLightbox();
+});
+</script>
 
 <!-- ── BOOK TICKETS NOW ───────────────────────────────────── -->
 <section class="book-now" id="book">
