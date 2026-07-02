@@ -1115,6 +1115,117 @@
   </div>
 </div>
 
+<!-- ── EVENT GALLERY ──────────────────────────────────────── -->
+<section class="nb-gallery" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">In Photos</p>
+      <h2 class="section-title">Sub Summit Northern Beaches<br><span style="font-size:0.65em;font-weight:600;color:var(--brown);">June 30, 2026</span></h2>
+    </div>
+    <div class="nb-masonry">
+      <a href="../images/gallery/northern-beaches/20260630SUB-70-speakers.jpg" class="nb-photo-item" target="_blank" data-label="Speakers">
+        <img src="../images/gallery/northern-beaches/20260630SUB-70-speakers.jpg" alt="Speakers" loading="lazy">
+        <span class="nb-photo-label">Speakers</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-83-speakers.jpg" class="nb-photo-item" target="_blank" data-label="Speakers">
+        <img src="../images/gallery/northern-beaches/20260630SUB-83-speakers.jpg" alt="Speakers" loading="lazy">
+        <span class="nb-photo-label">Speakers</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-86-speakers.jpg" class="nb-photo-item" target="_blank" data-label="Speakers">
+        <img src="../images/gallery/northern-beaches/20260630SUB-86-speakers.jpg" alt="Speakers" loading="lazy">
+        <span class="nb-photo-label">Speakers</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-1-expo.jpg" class="nb-photo-item" target="_blank" data-label="Expo">
+        <img src="../images/gallery/northern-beaches/20260630SUB-1-expo.jpg" alt="Expo" loading="lazy">
+        <span class="nb-photo-label">Expo</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-2-speakers.png" class="nb-photo-item" target="_blank" data-label="Speakers">
+        <img src="../images/gallery/northern-beaches/20260630SUB-2-speakers.png" alt="Speakers" loading="lazy">
+        <span class="nb-photo-label">Speakers</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-3-speakers.png" class="nb-photo-item" target="_blank" data-label="Speakers">
+        <img src="../images/gallery/northern-beaches/20260630SUB-3-speakers.png" alt="Speakers" loading="lazy">
+        <span class="nb-photo-label">Speakers</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-4-expo.png" class="nb-photo-item" target="_blank" data-label="Expo">
+        <img src="../images/gallery/northern-beaches/20260630SUB-4-expo.png" alt="Expo" loading="lazy">
+        <span class="nb-photo-label">Expo</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-5-speakers.png" class="nb-photo-item" target="_blank" data-label="Speakers">
+        <img src="../images/gallery/northern-beaches/20260630SUB-5-speakers.png" alt="Speakers" loading="lazy">
+        <span class="nb-photo-label">Speakers</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-7-speakers.jpg" class="nb-photo-item" target="_blank" data-label="Speakers">
+        <img src="../images/gallery/northern-beaches/20260630SUB-7-speakers.jpg" alt="Speakers" loading="lazy">
+        <span class="nb-photo-label">Speakers</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-8-entertainment.jpg" class="nb-photo-item" target="_blank" data-label="Entertainment">
+        <img src="../images/gallery/northern-beaches/20260630SUB-8-entertainment.jpg" alt="Entertainment" loading="lazy">
+        <span class="nb-photo-label">Entertainment</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-23-charity.jpg" class="nb-photo-item" target="_blank" data-label="Charity">
+        <img src="../images/gallery/northern-beaches/20260630SUB-23-charity.jpg" alt="Charity" loading="lazy">
+        <span class="nb-photo-label">Charity</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-24.jpg" class="nb-photo-item" target="_blank" data-label="On The Day">
+        <img src="../images/gallery/northern-beaches/20260630SUB-24.jpg" alt="On The Day" loading="lazy">
+        <span class="nb-photo-label">On The Day</span>
+      </a>
+      <a href="../images/gallery/northern-beaches/20260630SUB-25-expo.jpg" class="nb-photo-item" target="_blank" data-label="Expo">
+        <img src="../images/gallery/northern-beaches/20260630SUB-25-expo.jpg" alt="Expo" loading="lazy">
+        <span class="nb-photo-label">Expo</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+.nb-gallery { padding: 72px 0 56px; background: var(--cream, #FAF8F4); }
+.nb-masonry {
+  column-count: 3;
+  column-gap: 16px;
+  margin-top: 40px;
+}
+@media (max-width: 768px) { .nb-masonry { column-count: 2; } }
+@media (max-width: 480px) { .nb-masonry { column-count: 1; } }
+
+.nb-photo-item {
+  display: block;
+  break-inside: avoid;
+  position: relative;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: zoom-in;
+}
+.nb-photo-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.35s ease;
+  border-radius: 10px;
+}
+.nb-photo-item:hover img {
+  transform: scale(1.06);
+}
+.nb-photo-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(28,28,28,0.72) 0%, transparent 100%);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 28px 14px 12px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  border-radius: 0 0 10px 10px;
+}
+.nb-photo-item:hover .nb-photo-label {
+  opacity: 1;
+}
+</style>
+
 <!-- ── BOOK TICKETS NOW ───────────────────────────────────── -->
 <section class="book-now" id="book">
   <div class="book-now-bg"></div>
