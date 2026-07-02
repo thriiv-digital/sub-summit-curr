@@ -225,6 +225,23 @@
     .masonry-zoom-icon svg { width: 14px; height: 14px; color: var(--white); }
     .masonry-item:hover .masonry-zoom-icon { opacity: 1; }
 
+    /* ── FILTER BUTTONS ────────────────────────────────── */
+    .gallery-filters {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px;
+    }
+    .filter-btn {
+      padding: 10px 22px; border-radius: 40px; border: 2px solid rgba(255,255,255,0.2);
+      background: transparent; color: var(--text-secondary);
+      font-family: inherit; font-size: 13px; font-weight: 700;
+      letter-spacing: 0.04em; cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn:hover { border-color: var(--amber); color: var(--amber); }
+    .filter-btn.active { background: var(--amber); border-color: var(--amber); color: var(--dark); }
+
+    .masonry-item { transition: opacity 0.25s ease; }
+    .masonry-item.hidden { display: none; }
+
     /* ── COMING SOON STRIP ──────────────────────────────── */
     .coming-soon {
       margin-top: 48px;
@@ -457,81 +474,156 @@
 <section class="gallery-section">
   <div class="container">
 
+    <!-- Filter buttons -->
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="past-events">Past Events</button>
+      <button class="filter-btn" data-filter="northern-beaches">2026 Northern Beaches</button>
+    </div>
+
     <div class="masonry" id="gallery">
 
-      <div class="masonry-item" onclick="openLightbox(0)">
+      <!-- Past Events -->
+      <div class="masonry-item" data-tag="past-events" onclick="openLightbox(this)">
         <img src="images/gallery/people.jpg" alt="People" loading="lazy" />
         <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="masonry-caption"><span class="masonry-caption-text">People</span></div>
       </div>
 
-      <div class="masonry-item" onclick="openLightbox(1)">
+      <div class="masonry-item" data-tag="past-events" onclick="openLightbox(this)">
         <img src="images/gallery/inspiring-speakers.jpg" alt="Inspiring Speakers" loading="lazy" />
         <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="masonry-caption"><span class="masonry-caption-text">Inspiring Speakers</span></div>
       </div>
 
-      <div class="masonry-item" onclick="openLightbox(2)">
+      <div class="masonry-item" data-tag="past-events" onclick="openLightbox(this)">
         <img src="images/gallery/networking.jpg" alt="Networking" loading="lazy" />
         <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="masonry-caption"><span class="masonry-caption-text">Networking</span></div>
       </div>
 
-      <div class="masonry-item" onclick="openLightbox(3)">
+      <div class="masonry-item" data-tag="past-events" onclick="openLightbox(this)">
         <img src="images/gallery/panel-discussions.jpg" alt="Panel Discussions" loading="lazy" />
         <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="masonry-caption"><span class="masonry-caption-text">Panel Discussions</span></div>
       </div>
 
-      <div class="masonry-item" onclick="openLightbox(4)">
+      <div class="masonry-item" data-tag="past-events" onclick="openLightbox(this)">
         <img src="images/gallery/conversation.jpg" alt="Conversation" loading="lazy" />
         <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="masonry-caption"><span class="masonry-caption-text">Conversation</span></div>
       </div>
 
-      <div class="masonry-item" onclick="openLightbox(5)">
+      <div class="masonry-item" data-tag="past-events" onclick="openLightbox(this)">
         <img src="images/gallery/local-business-expo.jpg" alt="Local Business Expo" loading="lazy" />
         <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="masonry-caption"><span class="masonry-caption-text">Local Business Expo</span></div>
       </div>
 
-      <div class="masonry-item" onclick="openLightbox(6)">
+      <div class="masonry-item" data-tag="past-events" onclick="openLightbox(this)">
         <img src="images/gallery/charities.jpg" alt="Charities" loading="lazy" />
         <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="masonry-caption"><span class="masonry-caption-text">Charities</span></div>
       </div>
 
-      <div class="masonry-item" onclick="openLightbox(7)">
+      <div class="masonry-item" data-tag="past-events" onclick="openLightbox(this)">
         <img src="images/gallery/local-council-state-govt.jpg" alt="Local Council &amp; State Government" loading="lazy" />
         <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="masonry-caption"><span class="masonry-caption-text">Local Council &amp; State Government</span></div>
       </div>
 
-      <div class="masonry-item" onclick="openLightbox(8)">
+      <div class="masonry-item" data-tag="past-events" onclick="openLightbox(this)">
         <img src="images/gallery/local-business-catering.jpg" alt="Local Business Catering" loading="lazy" />
         <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="masonry-caption"><span class="masonry-caption-text">Local Business Catering</span></div>
       </div>
 
-      <div class="masonry-item" onclick="openLightbox(9)">
+      <div class="masonry-item" data-tag="past-events" onclick="openLightbox(this)">
         <img src="images/gallery/entertainment.jpg" alt="Entertainment" loading="lazy" />
         <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="masonry-caption"><span class="masonry-caption-text">Entertainment</span></div>
       </div>
 
-    </div>
-
-    <!-- Coming soon -->
-    <div class="coming-soon">
-      <div class="coming-soon-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <!-- 2026 Northern Beaches -->
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-70-speakers.jpg" alt="Speakers" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Speakers</span></div>
       </div>
-      <div class="coming-soon-text">
-        <h3>More photos coming soon</h3>
-        <p>We're adding photos from the <strong>Northern Beaches Summit — June 30, 2026</strong> shortly. Follow us on <a href="https://www.facebook.com/SuburbanBusinessSummit" target="_blank" rel="noopener">Facebook</a> and <a href="https://www.instagram.com/SuburbanBusinessSummit" target="_blank" rel="noopener">Instagram</a> for live updates on the day.</p>
-      </div>
-    </div>
 
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-83-speakers.jpg" alt="Speakers" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Speakers</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-86-speakers.jpg" alt="Speakers" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Speakers</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-1-expo.jpg" alt="Expo" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Expo</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-2-speakers.png" alt="Speakers" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Speakers</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-3-speakers.png" alt="Speakers" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Speakers</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-4-expo.png" alt="Expo" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Expo</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-5-speakers.png" alt="Speakers" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Speakers</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-7-speakers.jpg" alt="Speakers" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Speakers</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-8-entertainment.jpg" alt="Entertainment" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Entertainment</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-23-charity.jpg" alt="Charity" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Charity</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-24.jpg" alt="On The Day" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">On The Day</span></div>
+      </div>
+
+      <div class="masonry-item" data-tag="northern-beaches" onclick="openLightbox(this)">
+        <img src="images/gallery/northern-beaches/20260630SUB-25-expo.jpg" alt="Expo" loading="lazy" />
+        <div class="masonry-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <div class="masonry-caption"><span class="masonry-caption-text">Expo</span></div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -597,23 +689,16 @@
   
 
 <script>
-  var images = [
-    { src: 'images/gallery/people.jpg',                   caption: 'People' },
-    { src: 'images/gallery/inspiring-speakers.jpg',       caption: 'Inspiring Speakers' },
-    { src: 'images/gallery/networking.jpg',               caption: 'Networking' },
-    { src: 'images/gallery/panel-discussions.jpg',        caption: 'Panel Discussions' },
-    { src: 'images/gallery/conversation.jpg',             caption: 'Conversation' },
-    { src: 'images/gallery/local-business-expo.jpg',      caption: 'Local Business Expo' },
-    { src: 'images/gallery/charities.jpg',                caption: 'Charities' },
-    { src: 'images/gallery/local-council-state-govt.jpg', caption: 'Local Council & State Government' },
-    { src: 'images/gallery/local-business-catering.jpg',  caption: 'Local Business Catering' },
-    { src: 'images/gallery/entertainment.jpg',            caption: 'Entertainment' },
-  ];
+  var visibleItems = [];
+  var currentIndex = 0;
 
-  var current = 0;
+  function getVisible() {
+    return Array.from(document.querySelectorAll('.masonry-item:not(.hidden)'));
+  }
 
-  function openLightbox(index) {
-    current = index;
+  function openLightbox(el) {
+    visibleItems = getVisible();
+    currentIndex = visibleItems.indexOf(el);
     showImage();
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -625,23 +710,41 @@
   }
 
   function showImage() {
-    document.getElementById('lightboxImg').src = images[current].src;
-    document.getElementById('lightboxImg').alt = images[current].caption;
-    document.getElementById('lightboxCaption').textContent = images[current].caption;
-    document.getElementById('lightboxCounter').textContent = (current + 1) + ' / ' + images.length;
+    var el = visibleItems[currentIndex];
+    var img = el.querySelector('img');
+    var caption = el.querySelector('.masonry-caption-text').textContent;
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightboxImg').alt = caption;
+    document.getElementById('lightboxCaption').textContent = caption;
+    document.getElementById('lightboxCounter').textContent = (currentIndex + 1) + ' / ' + visibleItems.length;
   }
 
   function navigate(dir) {
-    current = (current + dir + images.length) % images.length;
+    currentIndex = (currentIndex + dir + visibleItems.length) % visibleItems.length;
     showImage();
   }
 
-  // Keyboard navigation
   document.addEventListener('keydown', function(e) {
     if (!document.getElementById('lightbox').classList.contains('open')) return;
     if (e.key === 'ArrowLeft')  navigate(-1);
     if (e.key === 'ArrowRight') navigate(1);
     if (e.key === 'Escape')     closeLightbox();
+  });
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      document.querySelectorAll('.masonry-item').forEach(function(item) {
+        if (filter === 'all' || item.getAttribute('data-tag') === filter) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
   });
 </script>
 
